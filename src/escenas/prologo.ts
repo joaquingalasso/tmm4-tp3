@@ -206,7 +206,8 @@ export class Prologo implements Escena {
     if (this.ms > TOMAS[4]) f = 1;
     return {
       fundido: f,
-      recuerdo: this.toma === 0 || this.toma === 3 ? 0 : 1,
+      // al oscurecerse el agua, la siesta se apaga con ella: al retrato se llega sin corte
+      recuerdo: this.toma === 0 || this.toma === 3 ? 0 : this.toma === 2 ? 1 - suave(TOMAS[2] + 5500, TOMAS[2] + 9000, this.ms) : 1,
       miedo: this.toma === 3 ? 0.25 : 0.06,
     };
   }

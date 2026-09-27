@@ -29,9 +29,9 @@ Hay una canción de cuna en la familia, tarareada, sin letra. Sus notas son las 
 - **Si la alcanzan, no hay game over:** la cámara entra en sus ojos (lo que la agarró, enorme, recortado contra una luz fría), se da vuelta de un latigazo y la **arrastran en primera persona, al revés, como una cinta rebobinada**, hasta la última luz que encendió; de ahí sale al costado.
 - **En el recuerdo, primero se habla con ellas; cantarles su melodía las calma... y su sombra se le escurre a la nena.** Dicen lo suyo y se desvanecen. Es opcional: también se puede soltarles la mano.
 - **Cada una le da algo que la condena:** Mariela, un espejito (mirarse, ser mirada); la madre, la llave de la casa (cerrar todo, no salir sola); la abuela, un rosario (rezar, la culpa). Las conversaciones giran alrededor de ese objeto. Lo aceptado queda colgado de la sombra de Josefina y parpadea (su sombra no), y le pone cara a una de las sombras que la persiguen. Lo que ella creía suyo tiene otros orígenes.
-- **Cada cruce de plano es una animación en primera persona con el objeto como ancla:** *el espejo* está en el piso, la cámara baja, en el reflejo está ella, algo se asoma detrás y de golpe aparece la nena; el espejo sale de cuadro y ya es la siesta. *La llave*: la cámara va a la cerradura de la puerta que sigue y espía (cruza una figura, un ojo mira de vuelta); después la llave entra, gira, la puerta se abre a la luz de la siesta. *El rosario* baja colgado, la cámara sube por el hilo y descubre que lo sostiene una de las cosas: susto, y un salto frenético al otro plano.
+- **Cada cruce de plano es una animación en primera persona con el objeto como ancla:** *el espejo* está en el piso, la cámara baja y en el reflejo no está ella: está lo de Mariela (la mano de abajo de la cama), que se arrastra hacia el vidrio; la cámara se inquieta, el espejo sale de cuadro y ya es la siesta. *La llave*: la cámara se agacha a la cerradura de la puerta que sigue y espía (cruza una figura, un ojo mira de vuelta); se sobresalta, vuelve a pararse frente a la puerta, la llave gira y la puerta se abre de verdad; desde ahí mismo la cámara sale a la tercera persona, ya en el otro plano. Todas las transiciones son graduales. *El rosario* baja colgado, la cámara sube por el hilo y descubre que lo sostiene una de las cosas: susto, y un salto frenético al otro plano.
 
-**Paredes de verdad:** cortan el paso paredes con volumen (caras, canto, dintel y puerta). En el presente, con la puerta tapada de muebles: se encerró ella. En el recuerdo, paredes de cal con postigo. En tercera persona la casa se ve cortada, como una casa de muñecas, y cada cuarto que todavía no se abrió está tapado por su frente de papel pintado, que se levanta cuando ella entra o se abre la puerta; en primera persona la pared se completa y tapa la vista. La puerta del piano gira sobre su bisagra al abrirse. Al principio de cada lado hay trastos; al final del patio, un portón.
+**Paredes de verdad:** cortan el paso paredes con volumen (caras, canto, dintel y puerta). En el presente, con la puerta tapada de muebles: se encerró ella. En el recuerdo, paredes de cal con postigo. En tercera persona la casa se ve cortada, como una casa de muñecas, y cada cuarto que todavía no se abrió está tapado por su frente de papel pintado, pegado a la pared (no se ve nada del cuarto siguiente); desaparece sin verse cuando ella ya está de ese lado, y se desvanece si la puerta se abre; en primera persona la pared se completa y tapa la vista. La puerta del piano gira sobre su bisagra al abrirse. Al principio de cada lado hay trastos; al final del patio, un portón.
 
 **Josefina piensa en voz baja** (subtítulos en cursiva, pocos): orientan sin explicar ("Si tarareo bajito, se va", "Tengo que salir de esta casa").
 
@@ -39,7 +39,7 @@ Hay una canción de cuna en la familia, tarareada, sin letra. Sus notas son las 
 
 ## El recorrido
 
-1. **Prólogo** (sin palabras, salteable): la ruta de noche con la canción; la madre suelta la mano de la nena, que corre al aljibe; tres cabezas se asoman en el agua detrás de su cara; en el cuarto del altar, las sombras de ellas se escurren por la pared y entran en la sombra de la nena dormida.
+1. **Prólogo** (sin palabras, salteable): la ruta de noche con la canción; la madre suelta la mano de la nena, que corre al aljibe; sobre el agua, detrás de su cara, bajan colgados un espejito, una llave y un rosario; cae una gota sobre el reflejo y el agua se oscurece de a poco, hasta que de lo negro emerge el retrato de Josefina adulta.
 2. **Ahora**: despierta a oscuras, algo se acerca. Tararear enciende el velador y lo aleja.
 3. **Mariela** (la deja acercarse solo si está tranquila) → **Antes**: Mariela nena y lo que respira abajo de la cama.
 4. **El pasillo a oscuras y el piano que toca solo**: la canción, nota por nota. Cantarla de vuelta enciende la tele y abre el paso.
@@ -56,7 +56,7 @@ Hay una canción de cuna en la familia, tarareada, sin letra. Sus notas son las 
 | **NO PUDO** | elegir *(tirarse al agua)* | La opción tiembla y no funciona, tres veces. Se cae sentada: desde el piso, el aljibe y ella misma asomada arriba; el barro sube y las letras se hunden. |
 | **ANTES** | *(cantar con ella)*: la canción entera | Todo se vuelve luz de siesta; desde arriba, la boca del aljibe: dos caras, la grande se va, queda la nena. El agua se queda quieta, se vuelve foto, la foto se quema de blanco. El título y su reflejo en el agua; queda solo el reflejo. |
 
-Ella misma explica antes qué pasa con cada salida, y lo que dice cambia según cuántos miedos se aceptaron. Si aceptó alguno, en el camino final esas sombras caminan a su lado.
+Ella misma explica antes qué pasa con cada salida, y lo que dice cambia según cuántos miedos se aceptaron. Si aceptó alguno, en el camino final lo que le dieron (el espejito, la llave, el rosario) flota a su lado, alrededor del aljibe.
 
 ---
 

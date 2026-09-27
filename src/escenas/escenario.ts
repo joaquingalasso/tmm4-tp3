@@ -114,12 +114,12 @@ const EN_RECUERDO: Record<IdFig, number> = { mariela: X.marielaN, madre: X.madre
 const SPRITE_RECUERDO: Record<IdFig, string> = { mariela: 'mariela_nina', madre: 'madre_joven', abuela: 'abuela_joven' };
 /** Lo que cada una le da: el objeto que la condena, y el ancla de cada cruce de plano. */
 const OBJETO: Record<IdFig, string> = { mariela: 'objeto_espejo', madre: 'objeto_llave', abuela: 'objeto_rosario' };
-const DUR_ANCLA: Record<IdFig, number> = { mariela: 3.8, madre: 4.0, abuela: 3.4 };
+const DUR_ANCLA: Record<IdFig, number> = { mariela: 6.2, madre: 7.4, abuela: 3.8 };
 /** en que momento de cada animacion la camara sale al costado (el giro de plano) */
 const CURVA_ANCLA: Record<IdFig, (u: number) => number> = {
   mariela: (u) => easeIO(clamp((u - 0.74) / 0.26)),
-  madre: (u) => (u < 0.83 ? 0 : easeIO(clamp((u - 0.83) / 0.12))),
-  abuela: (u) => easeIO(clamp((u - 0.55) / 0.16)),
+  madre: (u) => easeIO(clamp((u - 0.76) / 0.24)),
+  abuela: (u) => easeIO(clamp((u - 0.56) / 0.24)),
 };
 function easeIO(u: number) { return u < 0.5 ? 4 * u * u * u : 1 - Math.pow(-2 * u + 2, 3) / 2; }
 
@@ -137,7 +137,7 @@ interface Mota { x: number; y: number; v: number; r: number; }
  * munecas: solo el tramo del fondo. En primera persona se completa el tramo de
  * adelante y tapa toda la vista: no se ve mas alla de la pared.
  */
-interface Pared { x: number; plano: Plano; frente: Carta[]; bisagra: THREE.Group; abierta: number; abre: () => boolean; }
+interface Pared { x: number; plano: Plano; frente: Carta[]; bisagra: THREE.Group; abierta: number; abre: () => boolean; forzada?: boolean; muebles?: Carta; }
 
 export class Escenario implements Escena {
   siguiente: NombreEscena | null = null;
@@ -178,6 +178,7 @@ export class Escenario implements Escena {
   /** 0..1: cuanto aguanto callada al final */
   private silencio = 0;
   private paredes: Pared[] = [];
+  private mueblesBarricada: Carta[] = [];
   private fachadas: { carta: Carta; desde: number; plano: Plano; revelada: number; abre: () => boolean }[] = [];
   private companeras: Carta[] = [];
   private cPorton!: Carta;
@@ -191,7 +192,7 @@ export class Escenario implements Escena {
   /** giro extra de la camara: al rebobinar, mira hacia atras (hacia donde la arrastran) */
   private vuelta = 0;
   /** el cruce de plano con el objeto de una de ellas como ancla */
-  private ancla: { fig: IdFig; t: number; dur: number; nuevo: Plano; puerta?: number } | null = null;
+  private ancla: { fig: IdFig; t: number; dur: number; nuevo: Plano; puerta?: number; desde?: number; pared?: Pared } | null = null;
   private msInvita = 2500;
   private msQuieta = 0;
   private msPaso = 0;
@@ -396,7 +397,7 @@ export class Escenario implements Escena {
 
     // lo que cierra el paso: paredes de verdad (ver construirParedes); en el presente, con sus
     // puertas tapadas de muebles: se encerro ella misma
-    for (const x of CORTINAS) this.objeto('barricada', x - 70, 20, 'A', { propia: 0.22 }, 0.55);
+    this.mueblesBarricada = CORTINAS.map((x) => this.objeto('barricada', x - 70, 20, 'A', { propia: 0.22 }, 0.55));
 
     // ella misma, del otro lado del aljibe (solo al final)
     this.cMismaA = this.agregar(new Carta({ w: FW, h: FH, res: 1.5, x: X.misma, z: 0, billboard: true, plano: 'A', animada: true, vaiven: 0.01,
@@ -422,25 +423,21 @@ export class Escenario implements Escena {
     }
 
     // su sombra: en el presente, contra la pared, con las cabezas de las que le dieron su miedo
-    const SWD = PW * 1.7, SHD = PH * 1.5;
+    const SWD = PW * 2.8, SHD = PH * 1.5;
     this.cSombraA = this.agregar(new Carta({ w: SWD, h: SHD, res: 1, x: this.gx, z: -45, plano: 'A', animada: true, orden: -3,
       dibujar: (c) => this.dibujarSombra(c, SWD, SHD, false) }));
     this.cSombraC = this.agregar(new Carta({ w: SWD, h: SHD, res: 1, x: this.gx, z: 45, rotY: Math.PI, plano: 'C', animada: true, propia: 0.95, orden: -3,
       dibujar: (c) => this.dibujarSombra(c, SWD, SHD, true) }));
 
-    // en el camino final, las sombras que acepto caminan con ella
+    // en el camino final, lo que le dieron (el espejito, la llave, el rosario) flota a su lado
     FIGS.forEach((fig, i) => {
-      const id = `sombra_${fig}`;
-      const h = hoja(id);
-      const w = h.w * 0.62, a = h.h * 0.62;
-      const carta = this.agregar(new Carta({ w, h: a, res: 1, x: 0, z: 0, billboard: true, animada: true, propia: 0.3,
-        clave: () => cuadroEn(id, this.t) + (this.hecho[fig] ? 0 : 100),
+      const tam = 110;
+      const carta = this.agregar(new Carta({ w: tam, h: tam, res: 1.4, x: 0, y: 0, z: 0, billboard: true, animada: true, propia: 0.3,
+        clave: () => (this.pesoA < 0.5 ? 1 : 0),
         dibujar: (c) => {
-          // negras, con un contorno frio para que se recorten contra la noche
-          c.filter = 'brightness(0) drop-shadow(0 0 6px rgba(150,178,205,0.8))';
-          c.globalAlpha = 0.85;
-          if (this.hecho[fig]) pintar(c, id, cuadroEn(id, this.t), 0, 0, w, a);
-          else { const s = 'sombra'; const hs = hoja(s); const k = Math.min(w / hs.w, a / hs.h) * 1.4; pintar(c, s, cuadroEn(s, this.t), (w - hs.w * k) / 2, a - hs.h * k, hs.w * k, hs.h * k); }
+          // negro, con un borde de luz (fria en el presente, calida en el recuerdo)
+          c.filter = `brightness(0) drop-shadow(0 0 7px ${this.pesoA < 0.5 ? 'rgba(255,236,190,0.95)' : 'rgba(170,196,222,0.95)'})`;
+          pintar(c, OBJETO[fig], 0, tam * 0.1, tam * 0.1, tam * 0.8, tam * 0.8);
           c.filter = 'none';
         } }));
       carta.visible = 0;
@@ -532,16 +529,17 @@ export class Escenario implements Escena {
     armar(X.cortinaPiano, 'A', 'puerta_trabada', () => this.piano.resuelto);
     HUECOS.forEach((x, i) => armar(x, 'C', 'puerta_recuerdo', () => i === HUECOS.length - 1 && this.conSenora && this.planoFinal === 'C'));
 
-    // el frente de cada cuarto que todavia no se abrio: un bastidor de papel pintado que lo tapa
-    // en tercera persona, y que se levanta (como en el teatro) cuando ella entra o se abre la puerta
+    // el frente de cada cuarto que todavia no se abrio: un bastidor de papel pintado que lo tapa en
+    // tercera persona. Va pegado a la pared (justo delante del paso), asi no queda una franja por perspectiva.
+    // Cuando ella ya esta del otro lado desaparece sin verse; si se abre la puerta, se desvanece.
     const frentes = (plano: Plano, xs: number[], fin: number) => {
       const recuerdo = plano === 'C';
       const orden = [...xs].sort((a, b) => a - b);
       orden.forEach((desde, i) => {
         const hasta = i + 1 < orden.length ? orden[i + 1] : fin;
-        const w = hasta - desde + 60, h = 1100;
+        const ini = desde + 20, w = hasta - ini + 40, h = 1100;
         const pared = this.paredes.find((p) => p.x === desde && p.plano === plano)!;
-        const carta = this.agregar(new Carta({ w, h, res: 0.25, x: desde + (hasta - desde) / 2 + 20, y: -80, z: recuerdo ? -(PROF / 2 + 30) : PROF / 2 + 30,
+        const carta = this.agregar(new Carta({ w, h, res: 0.25, x: ini + w / 2, y: -80, z: recuerdo ? -92 : 92,
           rotY: recuerdo ? Math.PI : 0, plano, propia: recuerdo ? 0.95 : 0.5, lavado: recuerdo ? 0.2 : 0,
           dibujar: (c) => {
             const hj = hoja(recuerdo ? 'pared_recuerdo' : 'pared_presente');
@@ -560,6 +558,7 @@ export class Escenario implements Escena {
       });
     };
     frentes('A', [...CORTINAS, X.cortinaPiano], X.tapia);
+    CORTINAS.forEach((x, i) => { const p = this.paredes.find((q) => q.x === x && q.plano === 'A'); if (p) p.muebles = this.mueblesBarricada[i]; });
     frentes('C', HUECOS, 7000);
   }
 
@@ -591,8 +590,12 @@ export class Escenario implements Escena {
     // en el presente, la luz de las lamparas y de su voz sobre la pared: ahi se recorta la sombra
     if (!recuerdo) {
       const luz = 0.1 + this.cercaDeLuz() * 0.14 + this.aura.fuerza * 0.16;
-      const g = c.createRadialGradient(w / 2, h * 0.55, 10, w / 2, h * 0.55, w * 0.62);
-      g.addColorStop(0, `rgba(230,190,130,${luz})`); g.addColorStop(1, 'rgba(230,190,130,0)');
+      // el radio entra entero en la carta: el degradado llega a cero antes del borde
+      const rr = Math.min(w / 2, h * 0.5) * 0.97;
+      const g = c.createRadialGradient(w / 2, h * 0.52, 0, w / 2, h * 0.52, rr);
+      g.addColorStop(0, `rgba(230,190,130,${luz})`);
+      g.addColorStop(0.45, `rgba(230,190,130,${luz * 0.55})`);
+      g.addColorStop(1, 'rgba(230,190,130,0)');
       c.fillStyle = g; c.fillRect(0, 0, w, h);
     }
     c.save();
@@ -661,7 +664,7 @@ export class Escenario implements Escena {
     this.relampago = 0;
     this.piano = { resuelto: false };
     for (const p of this.paredes) { p.abierta = 0; p.bisagra.rotation.y = 0; }
-    for (const f of this.fachadas) { f.revelada = 0; f.carta.mesh.position.y = -80; }
+    for (const f of this.fachadas) f.revelada = 0;
     this.cMismaA.visible = this.cMismaC.visible = 0;
     this.cMismaA.mesh.position.set(X.misma, 0, 0);
     this.cMismaC.mesh.position.set(X.misma, 0, 0);
@@ -781,8 +784,19 @@ export class Escenario implements Escena {
     if (this.ancla) {
       this.ancla.t += dt;
       const u = this.ancla.t / this.ancla.dur;
-      const cambia = { mariela: 0.46, madre: 0.12, abuela: 0.56 }[this.ancla.fig];
+      const cambia = { mariela: 0.6, madre: 0.73, abuela: 0.56 }[this.ancla.fig];
       if (u >= cambia) this.visto = this.ancla.nuevo;
+      // la llave: va hasta la cerradura, espia, se asusta, vuelve a pararse frente a la puerta,
+      // y la puerta se abre. La tercera persona sale de ahi mismo.
+      const an = this.ancla;
+      if (an.fig === 'madre' && an.desde !== undefined && an.puerta !== undefined) {
+        const frente = Math.max(an.desde, an.puerta - 250);
+        this.gx = lerp(an.desde, frente, suave(0.3, 0.58, u));
+        if (an.pared) {
+          an.pared.forzada = u > 0.6;
+          if (an.pared.muebles) an.pared.muebles.visible = 1 - suave(0, 0.12, u);
+        }
+      }
     }
     // al principio, antes de la primera cancion: alguien tararea bajito, como invitando
     if (this.fase === 'llamado' && v.estado !== 'tarareo') {
@@ -1026,17 +1040,18 @@ export class Escenario implements Escena {
       if (this.msFase > 6000 && partida.carga > 0) this.pensar('ellas');
       if (this.gx >= X.aljibe - 330) { this.gx = X.aljibe - 330; this.cambiar('encuentro'); }
     }
-    // las sombras aceptadas caminan a su lado, un poco adelante, en los bordes de la vista
+    // lo que le dieron flota a su lado, un poco adelante, en los bordes de la vista
     const conElla = this.fase === 'umbral' || this.fase === 'encuentro' || this.fase === 'final' || this.fase === 'callar';
     FIGS.forEach((fig, i) => {
       const cc = this.companeras[i];
       const callando = this.fase === 'callar' || this.fase === 'desgarro';
-      cc.visible = hacia(cc.visible, (conElla && this.hecho[fig]) || callando ? 1 : 0, 1.2, dt);
+      cc.visible = hacia(cc.visible, conElla && this.hecho[fig] ? 1 : 0, 1.2, dt);
       const lado = i === 1 ? 1 : i === 0 ? -1 : 0.25;
       const junto = this.fase === 'umbral' ? 0 : 1;
       // mientras calla, vienen hacia ella... y la atraviesan
       const cerca = callando ? this.silencio : 0;
-      cc.mesh.position.set(this.gx + lerp(250 + i * 40 + junto * 40, 20, cerca), 0, lado * lerp(95 + i * 18 - junto * 5, 20, cerca) + Math.sin(this.t * 0.8 + i) * 4);
+      cc.mesh.position.set(this.gx + lerp(230 + i * 40 + junto * 40, 20, cerca), lerp(i === 2 ? 170 : 115, 140, cerca) + Math.sin(this.t * 1.1 + i * 2) * 10,
+        lado * lerp(80 + i * 14, 15, cerca) + Math.sin(this.t * 0.8 + i) * 4);
     });
     if (this.fase === 'encuentro') {
       if (this.msFase < 20) x.son.cancion(x.voz.frecRelativa(this.planoFinal === 'A' ? 12 : 0), 0.05, 0.9);
@@ -1153,6 +1168,7 @@ export class Escenario implements Escena {
       desde: this.phi, hasta: nuevo === 'A' ? 0 : Math.PI, t: 0, dur: conAncla ? DUR_ANCLA[b.fig!] : 1.8,
       curva: conAncla ? CURVA_ANCLA[b.fig!] : undefined,
       luego: () => {
+        if (this.ancla?.pared) { this.ancla.pared.forzada = false; if (this.ancla.pared.muebles) this.ancla.pared.muebles.visible = 1; }
         this.ancla = null;
         this.lado = nuevo;
         this.bisagra = null;
@@ -1173,20 +1189,24 @@ export class Escenario implements Escena {
     // la puerta a espiar, en la llave: la siguiente pared del plano de donde sale
     const pared = this.paredes.filter((p) => p.plano === this.lado && p.x > this.gx).sort((p, q) => p.x - q.x)[0];
     this.ancla.puerta = pared ? pared.x : this.gx + 400;
+    this.ancla.desde = this.gx;
+    this.ancla.pared = pared;
     const son = this.x.son, v = this.x.voz;
     const en = (u: number, fn: () => void) => setTimeout(fn, u * dur * 1000);
     if (fig === 'mariela') {
-      en(0.3, () => son.campana(v.frecRelativa(12), 0.07));
-      en(0.34, () => { for (const n of [-11, -10]) son.piano(v.frecRelativa(n), 0.14); });
-      en(0.46, () => son.campana(v.frecRelativa(19), 0.09));
-      en(0.66, () => son.paso(0.08, 1800));
+      en(0.22, () => son.campana(v.frecRelativa(12), 0.06));
+      en(0.44, () => { for (const n of [-11, -10, -4]) son.piano(v.frecRelativa(n), 0.16); });
+      en(0.5, () => son.campana(v.frecRelativa(13), 0.05));
+      en(0.6, () => son.paso(0.08, 1800));
+      en(0.62, () => son.tinta(1.4));
     }
     if (fig === 'madre') {
-      en(0.08, () => son.paso(0.06, 700)); en(0.2, () => son.paso(0.06, 700));
-      en(0.3, () => son.gota(true));
-      en(0.47, () => { for (const n of [-13, -7, -6]) son.piano(v.frecRelativa(n), 0.22); });
-      en(0.66, () => son.paso(0.25, 260)); en(0.71, () => son.paso(0.35, 180));
-      en(0.76, () => son.tinta(1.2));
+      en(0.04, () => son.paso(0.06, 700)); en(0.12, () => son.paso(0.06, 700));
+      en(0.25, () => son.gota(true));
+      en(0.42, () => { for (const n of [-13, -7, -6]) son.piano(v.frecRelativa(n), 0.22); });
+      en(0.55, () => son.paso(0.1, 900));
+      en(0.6, () => son.paso(0.25, 260)); en(0.65, () => son.paso(0.35, 180));
+      en(0.72, () => son.tinta(1.6));
     }
     if (fig === 'abuela') {
       for (let i = 0; i < 8; i++) en(0.05 + i * 0.05, () => son.paso(0.04, 2800 + (i % 2) * 600));
@@ -1281,18 +1301,26 @@ export class Escenario implements Escena {
     if (this.ancla && this.giro) {
       const an = this.ancla, u = clamp(an.t / an.dur);
       if (an.fig === 'mariela') {
-        // mira al piso: ahi esta el espejo
-        const baja = suave(0.02, 0.22, u) * (1 - suave(0.66, 0.8, u));
+        // mira al piso: ahi esta el espejo. Cuando ve lo que hay en el reflejo, se inquieta.
+        const baja = suave(0.02, 0.2, u) * (1 - suave(0.64, 0.8, u));
         cam.rotation.x += -0.95 * baja;
+        const inquieta = suave(0.42, 0.47, u) * (1 - suave(0.6, 0.72, u));
+        cam.rotation.z += (Math.sin(this.t * 29) * 0.035 + Math.sin(this.t * 6.3) * 0.05) * inquieta;
+        cam.rotation.y += Math.sin(this.t * 4.1) * 0.06 * inquieta;
+        cam.position.y += Math.sin(this.t * 41) * 4 * inquieta;
       }
       if (an.fig === 'madre') {
-        // va hasta la cerradura de la puerta que sigue, espia, se corre al medio de la puerta
-        const va = suave(0.0, 0.3, u) * (u < 0.83 ? 1 : 0);
+        // se agacha a la altura de la cerradura; al ver el ojo se sobresalta y vuelve a pararse frente a la puerta
+        const agacha = suave(0.02, 0.2, u) * (1 - suave(0.47, 0.6, u));
         const px = (an.puerta ?? this.gx + 400) - 60;
-        cam.position.x = lerp(cam.position.x, px, va);
-        cam.position.y = lerp(cam.position.y, 128, va);
-        cam.position.z = lerp(cam.position.z, 40 * (1 - suave(0.58, 0.68, u)), va);
-        cam.rotation.x = lerp(cam.rotation.x, 0, va);
+        cam.position.x = lerp(cam.position.x, px, agacha);
+        cam.position.y = lerp(cam.position.y, 128, agacha);
+        cam.position.z = lerp(cam.position.z, 40, agacha);
+        cam.rotation.x = lerp(cam.rotation.x, 0, agacha);
+        const susto = suave(0.43, 0.46, u) * (1 - suave(0.52, 0.62, u));
+        cam.rotation.z += (Math.sin(this.t * 31) * 0.04 + Math.sin(this.t * 5.7) * 0.03) * susto;
+        cam.rotation.y += Math.sin(this.t * 4.3) * 0.05 * susto;
+        cam.position.x -= susto * 25;
       }
       if (an.fig === 'abuela') {
         // sigue el rosario que baja... y mira para arriba: lo que lo sostiene
@@ -1367,15 +1395,14 @@ export class Escenario implements Escena {
     // las paredes: el tramo de adelante aparece en primera persona; las puertas que se abren giran
     for (const p of this.paredes) {
       for (const c of p.frente) c.visible = cercaB;
-      p.abierta = hacia(p.abierta, p.abre() ? 1 : 0, 1.6, 1 / 60);
+      p.abierta = hacia(p.abierta, p.abre() || p.forzada ? 1 : 0, p.forzada ? 1.1 : 1.6, 1 / 60);
       p.bisagra.rotation.y = (p.plano === 'A' ? 1 : -1) * p.abierta * 1.75;
     }
-    // los frentes de los cuartos cerrados: tapan en tercera persona; se levantan al entrar
+    // los frentes de los cuartos cerrados: tapan en tercera persona
     for (const f of this.fachadas) {
-      if (f.revelada < 1 && ((this.lado === f.plano && this.gx > f.desde + 30 && !this.giro) || f.abre())) f.revelada = Math.min(1, f.revelada + 1 / 90);
-      else if (f.revelada > 0 && f.revelada < 1) f.revelada = Math.min(1, f.revelada + 1 / 90);
-      f.carta.mesh.position.y = -80 + suave(0, 1, f.revelada) * 1500;
-      f.carta.visible = (1 - suave(0.6, 1, f.revelada)) * (1 - cercaB);
+      if (f.revelada < 1 && this.visto === f.plano && this.gx > f.desde + 30) f.revelada = 1;
+      else if (f.abre() || (f.revelada > 0 && f.revelada < 1)) f.revelada = Math.min(1, f.revelada + 1 / 45);
+      f.carta.visible = (1 - f.revelada) * (1 - cercaB);
     }
     // en primera persona los biombos se apagan: queda solo quien habla
     for (const b of this.biombos) b.visible = 1 - cercaB;
@@ -1536,62 +1563,49 @@ export class Escenario implements Escena {
     else this.anclaRosario(c, u);
   }
 
-  /** El espejo en el piso: la camara baja, en el reflejo esta ella... y de pronto la nena. */
+  /** El espejo en el piso: la camara baja y en el reflejo, en vez de ella, hay algo. Se inquieta; el espejo sale de cuadro. */
   private anclaEspejo(c: CanvasRenderingContext2D, u: number) {
-    const entra = suave(0.08, 0.26, u), sale = suave(0.62, 0.76, u);
+    const entra = suave(0.06, 0.24, u), sale = suave(0.56, 0.72, u);
     if (entra <= 0 || sale >= 1) return;
-    const cx = W / 2 + sale * 720, cy = lerp(H + 180, H * 0.52, entra) + sale * 120;
+    const cx = W / 2 + sale * 780, cy = lerp(H + 180, H * 0.52, entra) + sale * 180;
     const rx = 170, ry = 120;
     c.save();
     c.translate(cx, cy);
-    c.rotate(-0.12 + sale * 0.6);
+    c.rotate(-0.12 + sale * 0.7);
     // el marco y el mango
     c.fillStyle = '#1c150e';
     c.fillRect(rx * 0.75, -16, rx * 0.9, 32);
     c.beginPath(); c.ellipse(0, 0, rx + 18, ry + 14, 0, 0, Math.PI * 2); c.fill();
-    // el vidrio, con lo que refleja: primero ella, despues la nena
     c.save();
     c.beginPath(); c.ellipse(0, 0, rx, ry, 0, 0, Math.PI * 2); c.clip();
     const g = c.createLinearGradient(-rx, -ry, rx, ry);
     g.addColorStop(0, '#a9b6bf'); g.addColorStop(1, '#4e5a63');
     c.fillStyle = g; c.fillRect(-rx, -ry, rx * 2, ry * 2);
-    const nina = suave(0.44, 0.5, u);
-    const parpadeo = u > 0.43 && u < 0.51 ? (Math.sin(this.t * 60) > 0 ? 1 : 0) : 1;
-    const tam = ry * 2.9;
-    c.globalAlpha = (1 - nina) * parpadeo;
-    pintar(c, 'retrato_josefina_lejos', 0, -tam / 2, -tam / 2, tam, tam);
-    c.globalAlpha = nina * parpadeo;
-    pintar(c, 'retrato_nina_calma', 0, -tam / 2, -tam / 2, tam, tam);
-    // detras de ella, en el reflejo, algo se asoma por encima del hombro... y se va cuando cambia
-    const asoma = suave(0.3, 0.42, u) * (1 - suave(0.44, 0.48, u));
-    if (asoma > 0.01) {
-      c.save();
-      c.globalAlpha = asoma;
-      c.filter = 'brightness(0) drop-shadow(0 0 5px rgba(225,235,245,0.95))';
-      const bt = ry * 2.5;
-      const ox = rx * 0.78 + (1 - asoma) * 60, oy = -ry * 0.25 + (1 - asoma) * 40;
-      pintar(c, 'sombra', cuadroEn('sombra', this.t), ox - bt * 0.5, oy - bt * 0.45, bt, bt);
-      c.filter = 'none';
-      c.fillStyle = '#f4efe4';
-      for (const dx of [-8, 8]) { c.beginPath(); c.arc(ox - bt * 0.08 + dx, oy - bt * 0.26, 3.5, 0, Math.PI * 2); c.fill(); }
-      c.restore();
-    }
-    c.globalAlpha = 0.35;
+    // en el reflejo no esta ella: esta lo de Mariela (lo de abajo de la cama), que se arrastra hacia el vidrio
+    const cerca = suave(0.16, 0.5, u);
+    const bt = lerp(ry * 2.0, ry * 3.6, cerca);
+    const ox = lerp(-rx * 0.9, 0, suave(0.16, 0.42, u)) + Math.sin(this.t * 0.9) * 8;
+    const oy = (1 - cerca) * 30 + Math.sin(this.t * 1.4) * 4 * (1 + cerca);
+    c.save();
+    c.filter = 'contrast(1.4) drop-shadow(0 0 5px rgba(225,235,245,0.85))';
+    pintar(c, 'miedo_mariela', cuadroEn('miedo_mariela', this.t), ox - bt * 0.5, oy - bt * 0.62, bt, bt);
+    c.restore();
+    c.globalAlpha = 0.3;
     c.fillStyle = '#fff';
     c.beginPath(); c.moveTo(-rx * 0.7, -ry * 0.9); c.lineTo(-rx * 0.35, -ry * 0.9); c.lineTo(-rx * 0.9, ry * 0.5); c.lineTo(-rx * 1.1, ry * 0.2); c.fill();
     c.restore();
     c.restore();
   }
 
-  /** La llave: espia por la cerradura de la puerta que sigue; despues la llave entra, gira, y se abre. */
+  /** La llave: espia por la cerradura; algo cruza, un ojo mira. Vuelve a pararse, la llave gira y la puerta (la de verdad) se abre. */
   private anclaLlave(c: CanvasRenderingContext2D, u: number) {
     const cx = W / 2, cy = H * 0.46;
     // la cerradura: todo negro menos el ojo
-    const ojo = suave(0.08, 0.2, u) * (1 - suave(0.58, 0.66, u));
+    const ojo = suave(0.1, 0.22, u) * (1 - suave(0.47, 0.56, u));
     // del otro lado de la cerradura (se dibuja antes del negro: solo se ve por el ojo)
     if (ojo > 0.01) {
       // una figura larga y chorreante cruza la habitacion
-      const pasa = clamp((u - 0.26) / 0.16);
+      const pasa = clamp((u - 0.22) / 0.16);
       if (pasa > 0 && pasa < 1) {
         const tam = 420;
         c.save();
@@ -1601,7 +1615,7 @@ export class Escenario implements Escena {
         c.restore();
       }
       // y despues, un ojo del otro lado mira de vuelta
-      const mira = suave(0.46, 0.49, u) * (1 - suave(0.55, 0.58, u));
+      const mira = suave(0.4, 0.43, u) * (1 - suave(0.5, 0.54, u));
       if (mira > 0.01) {
         c.save();
         c.globalAlpha = mira;
@@ -1632,24 +1646,14 @@ export class Escenario implements Escena {
       c.fill('evenodd');
       c.restore();
     }
-    // la llave: entra desde abajo, se mete y gira dos vueltas
-    const llave = suave(0.6, 0.68, u) * (1 - suave(0.8, 0.84, u));
+    // la llave: ya parada frente a la puerta, entra en la cerradura y gira
+    const llave = suave(0.52, 0.57, u) * (1 - suave(0.66, 0.71, u));
     if (llave > 0.01) {
       c.save();
       c.globalAlpha = llave;
-      c.translate(cx, lerp(H + 120, cy, suave(0.6, 0.67, u)));
-      c.rotate(-Math.PI / 2 + suave(0.67, 0.78, u) * Math.PI);
-      this.objetoAncla(c, 'madre', 220);
-      c.restore();
-    }
-    // la puerta se abre: la luz de la siesta llena todo, y detras de la luz, el otro plano
-    const luz = suave(0.74, 0.82, u) * (1 - suave(0.86, 0.98, u));
-    if (luz > 0.01) {
-      c.save();
-      const ancho = W * suave(0.74, 0.82, u);
-      c.globalAlpha = luz;
-      c.fillStyle = '#f7ecd2';
-      c.fillRect(cx - ancho / 2, 0, ancho, H);
+      c.translate(cx + 90, lerp(H + 120, cy + 60, suave(0.52, 0.57, u)));
+      c.rotate(-Math.PI / 2 + suave(0.57, 0.63, u) * Math.PI);
+      this.objetoAncla(c, 'madre', 150);
       c.restore();
     }
   }
