@@ -1,0 +1,107 @@
+# Audere · imágenes
+
+Abrir **compendio.html** para ver todo, con las animaciones andando.
+
+Para reemplazar una imagen: dibujar sobre la plantilla, respetar el tamaño del PNG y guardarla con el mismo nombre en esta carpeta. El juego la toma sola.
+
+Sonidos: `sonidos/<nombre>.mp3` (o .wav/.ogg). Las plantillas editables están en `sonidos/_plantillas/`. Voces: `sonidos/voces/<guion>_<nodo>.mp3` (la lista con el texto está en el compendio).
+
+| archivo | cuadro (px) | cuadros | PNG entero (px) |
+|---|---|---|---|
+| `personajes/josefina_quieta.png` | 260×340 | 4 | 1040×340 |
+| `personajes/josefina_camina.png` | 260×340 | 8 | 2080×340 |
+| `personajes/josefina_tararea.png` | 260×340 | 4 | 1040×340 |
+| `personajes/josefina_tiembla.png` | 260×340 | 4 | 1040×340 |
+| `personajes/josefina_cae.png` | 260×340 | 6 | 1560×340 |
+| `personajes/nina_quieta.png` | 260×340 | 4 | 1040×340 |
+| `personajes/nina_camina.png` | 260×340 | 8 | 2080×340 |
+| `personajes/nina_tararea.png` | 260×340 | 4 | 1040×340 |
+| `personajes/nina_duerme.png` | 260×340 | 1 | 260×340 |
+| `personajes/mariela.png` | 420×480 | 4 | 1680×480 |
+| `frentes/mariela_frente.png` | 420×480 | 4 | 1680×480 |
+| `personajes/mariela_nina.png` | 420×480 | 4 | 1680×480 |
+| `frentes/mariela_nina_frente.png` | 420×480 | 4 | 1680×480 |
+| `personajes/madre.png` | 420×480 | 4 | 1680×480 |
+| `frentes/madre_frente.png` | 420×480 | 4 | 1680×480 |
+| `personajes/madre_joven.png` | 420×480 | 4 | 1680×480 |
+| `frentes/madre_joven_frente.png` | 420×480 | 4 | 1680×480 |
+| `personajes/abuela.png` | 420×480 | 4 | 1680×480 |
+| `frentes/abuela_frente.png` | 420×480 | 4 | 1680×480 |
+| `personajes/abuela_joven.png` | 420×480 | 4 | 1680×480 |
+| `frentes/abuela_joven_frente.png` | 420×480 | 4 | 1680×480 |
+| `personajes/senora.png` | 420×480 | 4 | 1680×480 |
+| `frentes/senora_frente.png` | 420×480 | 4 | 1680×480 |
+| `frentes/josefina_frente.png` | 420×480 | 4 | 1680×480 |
+| `frentes/nina_frente.png` | 420×480 | 4 | 1680×480 |
+| `oscuras/mariela_oscura.png` | 420×480 | 4 | 1680×480 |
+| `oscuras/mariela_oscura_frente.png` | 420×480 | 4 | 1680×480 |
+| `oscuras/madre_oscura.png` | 420×480 | 4 | 1680×480 |
+| `oscuras/madre_oscura_frente.png` | 420×480 | 4 | 1680×480 |
+| `oscuras/abuela_oscura.png` | 420×480 | 4 | 1680×480 |
+| `oscuras/abuela_oscura_frente.png` | 420×480 | 4 | 1680×480 |
+| `miedos/sombra.png` | 360×360 | 6 | 2160×360 |
+| `miedos/miedo_mariela.png` | 360×360 | 6 | 2160×360 |
+| `miedos/miedo_madre.png` | 360×360 | 6 | 2160×360 |
+| `miedos/miedo_abuela.png` | 360×360 | 6 | 2160×360 |
+| `retratos/mariela_calma.png` | 368×368 | 1 | 368×368 |
+| `retratos/mariela_triste.png` | 368×368 | 1 | 368×368 |
+| `retratos/mariela_lejos.png` | 368×368 | 1 | 368×368 |
+| `retratos/mariela_nina_miedo.png` | 368×368 | 1 | 368×368 |
+| `retratos/mariela_nina_calma.png` | 368×368 | 1 | 368×368 |
+| `retratos/madre_calma.png` | 368×368 | 1 | 368×368 |
+| `retratos/madre_lejos.png` | 368×368 | 1 | 368×368 |
+| `retratos/madre_joven_miedo.png` | 368×368 | 1 | 368×368 |
+| `retratos/madre_joven_calma.png` | 368×368 | 1 | 368×368 |
+| `retratos/abuela_calma.png` | 368×368 | 1 | 368×368 |
+| `retratos/abuela_lejos.png` | 368×368 | 1 | 368×368 |
+| `retratos/abuela_joven_miedo.png` | 368×368 | 1 | 368×368 |
+| `retratos/abuela_joven_calma.png` | 368×368 | 1 | 368×368 |
+| `retratos/senora_pena.png` | 368×368 | 1 | 368×368 |
+| `retratos/senora_lejos.png` | 368×368 | 1 | 368×368 |
+| `retratos/aljibe_lejos.png` | 368×368 | 1 | 368×368 |
+| `retratos/reflejo_calma.png` | 368×368 | 1 | 368×368 |
+| `retratos/nina_calma.png` | 368×368 | 1 | 368×368 |
+| `retratos/nina_lejos.png` | 368×368 | 1 | 368×368 |
+| `retratos/josefina_calma.png` | 368×368 | 1 | 368×368 |
+| `retratos/josefina_lejos.png` | 368×368 | 1 | 368×368 |
+| `telones/presente.png` | 3800×1080 | 1 | 3800×1080 |
+| `telones/recuerdo.png` | 3800×1080 | 1 | 3800×1080 |
+| `objetos/cama.png` | 360×200 | 1 | 360×200 |
+| `objetos/velador.png` | 88×220 | 2 | 176×220 |
+| `objetos/tele.png` | 300×280 | 2 | 600×280 |
+| `objetos/piano.png` | 520×440 | 1 | 520×440 |
+| `limites/pared_presente.png` | 512×512 | 1 | 512×512 |
+| `limites/pared_recuerdo.png` | 512×512 | 1 | 512×512 |
+| `limites/puerta_presente.png` | 240×660 | 1 | 240×660 |
+| `limites/puerta_recuerdo.png` | 240×660 | 1 | 240×660 |
+| `limites/puerta_trabada.png` | 240×660 | 2 | 480×660 |
+| `limites/barricada.png` | 400×440 | 1 | 400×440 |
+| `limites/trastos.png` | 400×700 | 1 | 400×700 |
+| `limites/ropero.png` | 400×700 | 1 | 400×700 |
+| `limites/porton.png` | 500×560 | 2 | 1000×560 |
+| `sombras/objeto_espejo.png` | 200×200 | 1 | 200×200 |
+| `sombras/objeto_llave.png` | 200×200 | 1 | 200×200 |
+| `sombras/objeto_rosario.png` | 200×200 | 1 | 200×200 |
+| `sombras/sombra_mariela.png` | 240×600 | 4 | 960×600 |
+| `sombras/sombra_madre.png` | 240×600 | 4 | 960×600 |
+| `sombras/sombra_abuela.png` | 240×600 | 4 | 960×600 |
+| `sombras/sombra_senora.png` | 240×600 | 4 | 960×600 |
+| `objetos/aljibe_presente.png` | 520×640 | 1 | 520×640 |
+| `objetos/aljibe_recuerdo.png` | 520×640 | 1 | 520×640 |
+| `objetos/altar_presente.png` | 480×800 | 2 | 960×800 |
+| `objetos/altar_recuerdo.png` | 480×800 | 2 | 960×800 |
+| `objetos/planta_presente.png` | 360×480 | 1 | 360×480 |
+| `objetos/planta_recuerdo.png` | 360×480 | 1 | 360×480 |
+| `objetos/ventilador.png` | 180×500 | 3 | 540×500 |
+| `objetos/mesa_mandarinas.png` | 360×220 | 1 | 360×220 |
+| `objetos/banqueta.png` | 140×120 | 1 | 140×120 |
+| `objetos/sillon.png` | 400×280 | 1 | 400×280 |
+| `efectos/biombo.png` | 520×560 | 4 | 2080×560 |
+| `efectos/biombo_vacio.png` | 520×560 | 1 | 520×560 |
+| `efectos/pantano.png` | 512×200 | 4 | 2048×200 |
+| `efectos/vela.png` | 48×100 | 2 | 96×100 |
+| `prologo/ruta.png` | 1920×540 | 1 | 1920×540 |
+| `prologo/renault12.png` | 600×260 | 2 | 1200×260 |
+| `prologo/patio_siesta.png` | 1920×1080 | 1 | 1920×1080 |
+| `prologo/reflejo.png` | 720×720 | 4 | 2880×720 |
+| `prologo/cuarto_altar.png` | 1920×1080 | 1 | 1920×1080 |

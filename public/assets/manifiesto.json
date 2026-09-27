@@ -1,0 +1,972 @@
+[
+  {
+    "id": "josefina_quieta",
+    "archivo": "personajes/josefina_quieta.png",
+    "w": 260,
+    "h": 340,
+    "cuadros": 4,
+    "fps": 4,
+    "grupo": "personajes",
+    "nota": "Josefina, en el presente. De perfil mirando a la DERECHA, los pies en el centro de abajo. respira quieta. Las manchas de tinta las agrega el juego encima: dibujarla limpia."
+  },
+  {
+    "id": "josefina_camina",
+    "archivo": "personajes/josefina_camina.png",
+    "w": 260,
+    "h": 340,
+    "cuadros": 8,
+    "fps": 10,
+    "grupo": "personajes",
+    "nota": "Josefina, en el presente. De perfil mirando a la DERECHA, los pies en el centro de abajo. ciclo de caminata completo. Las manchas de tinta las agrega el juego encima: dibujarla limpia."
+  },
+  {
+    "id": "josefina_tararea",
+    "archivo": "personajes/josefina_tararea.png",
+    "w": 260,
+    "h": 340,
+    "cuadros": 4,
+    "fps": 6,
+    "grupo": "personajes",
+    "nota": "Josefina, en el presente. De perfil mirando a la DERECHA, los pies en el centro de abajo. tararea con la boca cerrada, la cabeza apenas levantada. Las manchas de tinta las agrega el juego encima: dibujarla limpia."
+  },
+  {
+    "id": "josefina_tiembla",
+    "archivo": "personajes/josefina_tiembla.png",
+    "w": 260,
+    "h": 340,
+    "cuadros": 4,
+    "fps": 12,
+    "grupo": "personajes",
+    "nota": "Josefina, en el presente. De perfil mirando a la DERECHA, los pies en el centro de abajo. tiembla, se abraza. Las manchas de tinta las agrega el juego encima: dibujarla limpia."
+  },
+  {
+    "id": "josefina_cae",
+    "archivo": "personajes/josefina_cae.png",
+    "w": 260,
+    "h": 340,
+    "cuadros": 6,
+    "fps": 8,
+    "grupo": "personajes",
+    "nota": "Josefina, en el presente. De perfil mirando a la DERECHA, los pies en el centro de abajo. se cae sentada (el final \"no pudo\"); el ultimo cuadro queda quieto. Las manchas de tinta las agrega el juego encima: dibujarla limpia."
+  },
+  {
+    "id": "nina_quieta",
+    "archivo": "personajes/nina_quieta.png",
+    "w": 260,
+    "h": 340,
+    "cuadros": 4,
+    "fps": 4,
+    "grupo": "personajes",
+    "nota": "Josefina a los seis anos, en el recuerdo: rubia, vestido claro. De perfil mirando a la DERECHA. respira quieta."
+  },
+  {
+    "id": "nina_camina",
+    "archivo": "personajes/nina_camina.png",
+    "w": 260,
+    "h": 340,
+    "cuadros": 8,
+    "fps": 10,
+    "grupo": "personajes",
+    "nota": "Josefina a los seis anos, en el recuerdo: rubia, vestido claro. De perfil mirando a la DERECHA. caminata."
+  },
+  {
+    "id": "nina_tararea",
+    "archivo": "personajes/nina_tararea.png",
+    "w": 260,
+    "h": 340,
+    "cuadros": 4,
+    "fps": 6,
+    "grupo": "personajes",
+    "nota": "Josefina a los seis anos, en el recuerdo: rubia, vestido claro. De perfil mirando a la DERECHA. tararea."
+  },
+  {
+    "id": "nina_duerme",
+    "archivo": "personajes/nina_duerme.png",
+    "w": 260,
+    "h": 340,
+    "cuadros": 1,
+    "fps": 1,
+    "grupo": "personajes",
+    "nota": "Josefina a los seis anos, en el recuerdo: rubia, vestido claro. De perfil mirando a la DERECHA. dormida, sentada (para el sillon del prologo)."
+  },
+  {
+    "id": "mariela",
+    "archivo": "personajes/mariela.png",
+    "w": 420,
+    "h": 480,
+    "cuadros": 4,
+    "fps": 3,
+    "grupo": "personajes",
+    "nota": "Mariela hoy: linda, suelta, fumando en la puerta antes de salir. De perfil mirando a la IZQUIERDA (hacia donde viene la protagonista). Loop de 4 cuadros."
+  },
+  {
+    "id": "mariela_frente",
+    "archivo": "frentes/mariela_frente.png",
+    "w": 420,
+    "h": 480,
+    "cuadros": 4,
+    "fps": 3,
+    "grupo": "frentes",
+    "nota": "Mariela hoy: linda, suelta, fumando en la puerta antes de salir. DE FRENTE, mirando a la camara: es como se la ve en primera persona, cuando se habla con ella."
+  },
+  {
+    "id": "mariela_nina",
+    "archivo": "personajes/mariela_nina.png",
+    "w": 420,
+    "h": 480,
+    "cuadros": 4,
+    "fps": 10,
+    "grupo": "personajes",
+    "nota": "Mariela a los ocho, en el recuerdo: sentada, abraza un muneco de ojos que brillan. Tiene miedo. De perfil mirando a la IZQUIERDA (hacia donde viene la protagonista). Loop de 4 cuadros."
+  },
+  {
+    "id": "mariela_nina_frente",
+    "archivo": "frentes/mariela_nina_frente.png",
+    "w": 420,
+    "h": 480,
+    "cuadros": 4,
+    "fps": 10,
+    "grupo": "frentes",
+    "nota": "Mariela a los ocho, en el recuerdo: sentada, abraza un muneco de ojos que brillan. Tiene miedo. DE FRENTE, mirando a la camara: es como se la ve en primera persona, cuando se habla con ella."
+  },
+  {
+    "id": "madre",
+    "archivo": "personajes/madre.png",
+    "w": 420,
+    "h": 480,
+    "cuadros": 4,
+    "fps": 3,
+    "grupo": "personajes",
+    "nota": "La madre hoy: calma, planea vacaciones. Anteojos oscuros. De perfil mirando a la IZQUIERDA (hacia donde viene la protagonista). Loop de 4 cuadros."
+  },
+  {
+    "id": "madre_frente",
+    "archivo": "frentes/madre_frente.png",
+    "w": 420,
+    "h": 480,
+    "cuadros": 4,
+    "fps": 3,
+    "grupo": "frentes",
+    "nota": "La madre hoy: calma, planea vacaciones. Anteojos oscuros. DE FRENTE, mirando a la camara: es como se la ve en primera persona, cuando se habla con ella."
+  },
+  {
+    "id": "madre_joven",
+    "archivo": "personajes/madre_joven.png",
+    "w": 420,
+    "h": 480,
+    "cuadros": 4,
+    "fps": 10,
+    "grupo": "personajes",
+    "nota": "La madre en el recuerdo: las manos en la boca, asustada. De perfil mirando a la IZQUIERDA (hacia donde viene la protagonista). Loop de 4 cuadros."
+  },
+  {
+    "id": "madre_joven_frente",
+    "archivo": "frentes/madre_joven_frente.png",
+    "w": 420,
+    "h": 480,
+    "cuadros": 4,
+    "fps": 10,
+    "grupo": "frentes",
+    "nota": "La madre en el recuerdo: las manos en la boca, asustada. DE FRENTE, mirando a la camara: es como se la ve en primera persona, cuando se habla con ella."
+  },
+  {
+    "id": "abuela",
+    "archivo": "personajes/abuela.png",
+    "w": 420,
+    "h": 480,
+    "cuadros": 4,
+    "fps": 3,
+    "grupo": "personajes",
+    "nota": "La abuela hoy: sentada, pela una mandarina. De perfil mirando a la IZQUIERDA (hacia donde viene la protagonista). Loop de 4 cuadros."
+  },
+  {
+    "id": "abuela_frente",
+    "archivo": "frentes/abuela_frente.png",
+    "w": 420,
+    "h": 480,
+    "cuadros": 4,
+    "fps": 3,
+    "grupo": "frentes",
+    "nota": "La abuela hoy: sentada, pela una mandarina. DE FRENTE, mirando a la camara: es como se la ve en primera persona, cuando se habla con ella."
+  },
+  {
+    "id": "abuela_joven",
+    "archivo": "personajes/abuela_joven.png",
+    "w": 420,
+    "h": 480,
+    "cuadros": 4,
+    "fps": 10,
+    "grupo": "personajes",
+    "nota": "La abuela en el recuerdo: de rodillas, reza con el rosario para que pare la tormenta. De perfil mirando a la IZQUIERDA (hacia donde viene la protagonista). Loop de 4 cuadros."
+  },
+  {
+    "id": "abuela_joven_frente",
+    "archivo": "frentes/abuela_joven_frente.png",
+    "w": 420,
+    "h": 480,
+    "cuadros": 4,
+    "fps": 10,
+    "grupo": "frentes",
+    "nota": "La abuela en el recuerdo: de rodillas, reza con el rosario para que pare la tormenta. DE FRENTE, mirando a la camara: es como se la ve en primera persona, cuando se habla con ella."
+  },
+  {
+    "id": "senora",
+    "archivo": "personajes/senora.png",
+    "w": 420,
+    "h": 480,
+    "cuadros": 4,
+    "fps": 3,
+    "grupo": "personajes",
+    "nota": "La Senora, veinte anos despues: vieja, el pelo gris revuelto, rosarios. De perfil mirando a la IZQUIERDA (hacia donde viene la protagonista). Loop de 4 cuadros."
+  },
+  {
+    "id": "senora_frente",
+    "archivo": "frentes/senora_frente.png",
+    "w": 420,
+    "h": 480,
+    "cuadros": 4,
+    "fps": 3,
+    "grupo": "frentes",
+    "nota": "La Senora, veinte anos despues: vieja, el pelo gris revuelto, rosarios. DE FRENTE, mirando a la camara: es como se la ve en primera persona, cuando se habla con ella."
+  },
+  {
+    "id": "josefina_frente",
+    "archivo": "frentes/josefina_frente.png",
+    "w": 420,
+    "h": 480,
+    "cuadros": 4,
+    "fps": 3,
+    "grupo": "frentes",
+    "nota": "Josefina grande, DE FRENTE, mirando a cámara: es la que aparece del otro lado del aljibe si se llega desde el recuerdo. Mismo tamaño de cuadro que las figuras."
+  },
+  {
+    "id": "nina_frente",
+    "archivo": "frentes/nina_frente.png",
+    "w": 420,
+    "h": 480,
+    "cuadros": 4,
+    "fps": 3,
+    "grupo": "frentes",
+    "nota": "Josefina nena, DE FRENTE, mirando a cámara: la que aparece del otro lado del aljibe si se llega desde el presente."
+  },
+  {
+    "id": "mariela_oscura",
+    "archivo": "oscuras/mariela_oscura.png",
+    "w": 420,
+    "h": 480,
+    "cuadros": 4,
+    "fps": 6,
+    "grupo": "oscuras",
+    "nota": "Mariela hoy, vista por Josefina cuando pierde la calma: la misma pose y el mismo encuadre que mariela.png, pero monstruosa (negra, estirada, ojos de más, dedos larguísimos). Mirando a la IZQUIERDA. El juego funde una en la otra."
+  },
+  {
+    "id": "mariela_oscura_frente",
+    "archivo": "oscuras/mariela_oscura_frente.png",
+    "w": 420,
+    "h": 480,
+    "cuadros": 4,
+    "fps": 6,
+    "grupo": "oscuras",
+    "nota": "Mariela monstruosa, DE FRENTE (primera persona, cuando se habla con ella sin estar tranquila)."
+  },
+  {
+    "id": "madre_oscura",
+    "archivo": "oscuras/madre_oscura.png",
+    "w": 420,
+    "h": 480,
+    "cuadros": 4,
+    "fps": 6,
+    "grupo": "oscuras",
+    "nota": "La madre hoy, vista por Josefina cuando pierde la calma: la misma pose y el mismo encuadre que madre.png, pero monstruosa (negra, estirada, ojos de más, dedos larguísimos). Mirando a la IZQUIERDA. El juego funde una en la otra."
+  },
+  {
+    "id": "madre_oscura_frente",
+    "archivo": "oscuras/madre_oscura_frente.png",
+    "w": 420,
+    "h": 480,
+    "cuadros": 4,
+    "fps": 6,
+    "grupo": "oscuras",
+    "nota": "La madre monstruosa, DE FRENTE (primera persona, cuando se habla con ella sin estar tranquila)."
+  },
+  {
+    "id": "abuela_oscura",
+    "archivo": "oscuras/abuela_oscura.png",
+    "w": 420,
+    "h": 480,
+    "cuadros": 4,
+    "fps": 6,
+    "grupo": "oscuras",
+    "nota": "La abuela hoy, vista por Josefina cuando pierde la calma: la misma pose y el mismo encuadre que abuela.png, pero monstruosa (negra, estirada, ojos de más, dedos larguísimos). Mirando a la IZQUIERDA. El juego funde una en la otra."
+  },
+  {
+    "id": "abuela_oscura_frente",
+    "archivo": "oscuras/abuela_oscura_frente.png",
+    "w": 420,
+    "h": 480,
+    "cuadros": 4,
+    "fps": 6,
+    "grupo": "oscuras",
+    "nota": "La abuela monstruosa, DE FRENTE (primera persona, cuando se habla con ella sin estar tranquila)."
+  },
+  {
+    "id": "sombra",
+    "archivo": "miedos/sombra.png",
+    "w": 360,
+    "h": 360,
+    "cuadros": 6,
+    "fps": 8,
+    "grupo": "miedos",
+    "nota": "Una sombra sin cara, humo negro con brazos largos. Es lo que la persigue al principio: ella cree que es suyo. Avanza hacia la IZQUIERDA (el juego la espeja cuando viene del otro lado). Loop de 6 cuadros, base en el borde de abajo, fondo transparente."
+  },
+  {
+    "id": "miedo_mariela",
+    "archivo": "miedos/miedo_mariela.png",
+    "w": 360,
+    "h": 360,
+    "cuadros": 6,
+    "fps": 8,
+    "grupo": "miedos",
+    "nota": "Lo de abajo de la cama: una mano enorme que camina con los dedos. Aparece cuando se acepta el miedo de Mariela. Avanza hacia la IZQUIERDA (el juego la espeja cuando viene del otro lado). Loop de 6 cuadros, base en el borde de abajo, fondo transparente."
+  },
+  {
+    "id": "miedo_madre",
+    "archivo": "miedos/miedo_madre.png",
+    "w": 360,
+    "h": 360,
+    "cuadros": 6,
+    "fps": 8,
+    "grupo": "miedos",
+    "nota": "Una mujer larga y empapada que chorrea agua negra, siempre a punto de caerse. El miedo de la madre. Avanza hacia la IZQUIERDA (el juego la espeja cuando viene del otro lado). Loop de 6 cuadros, base en el borde de abajo, fondo transparente."
+  },
+  {
+    "id": "miedo_abuela",
+    "archivo": "miedos/miedo_abuela.png",
+    "w": 360,
+    "h": 360,
+    "cuadros": 6,
+    "fps": 8,
+    "grupo": "miedos",
+    "nota": "La tormenta encorvada, con una calavera chiquita con lucecitas en el pecho. El miedo de la abuela. Avanza hacia la IZQUIERDA (el juego la espeja cuando viene del otro lado). Loop de 6 cuadros, base en el borde de abajo, fondo transparente."
+  },
+  {
+    "id": "retrato_mariela_calma",
+    "archivo": "retratos/mariela_calma.png",
+    "w": 368,
+    "h": 368,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "retratos",
+    "nota": "Retrato para la caja de dialogo: mariela, gesto \"calma\". Caricatura, ojos grandes, trazo grueso. Paleta fria (presente)."
+  },
+  {
+    "id": "retrato_mariela_triste",
+    "archivo": "retratos/mariela_triste.png",
+    "w": 368,
+    "h": 368,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "retratos",
+    "nota": "Retrato para la caja de dialogo: mariela, gesto \"triste\". Caricatura, ojos grandes, trazo grueso. Paleta fria (presente)."
+  },
+  {
+    "id": "retrato_mariela_lejos",
+    "archivo": "retratos/mariela_lejos.png",
+    "w": 368,
+    "h": 368,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "retratos",
+    "nota": "Retrato para la caja de dialogo: mariela, gesto \"lejos\". Caricatura, ojos grandes, trazo grueso. Paleta fria (presente)."
+  },
+  {
+    "id": "retrato_mariela_nina_miedo",
+    "archivo": "retratos/mariela_nina_miedo.png",
+    "w": 368,
+    "h": 368,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "retratos",
+    "nota": "Retrato para la caja de dialogo: mariela_nina, gesto \"miedo\". Caricatura, ojos grandes, trazo grueso. Paleta sepia (recuerdo)."
+  },
+  {
+    "id": "retrato_mariela_nina_calma",
+    "archivo": "retratos/mariela_nina_calma.png",
+    "w": 368,
+    "h": 368,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "retratos",
+    "nota": "Retrato para la caja de dialogo: mariela_nina, gesto \"calma\". Caricatura, ojos grandes, trazo grueso. Paleta sepia (recuerdo)."
+  },
+  {
+    "id": "retrato_madre_calma",
+    "archivo": "retratos/madre_calma.png",
+    "w": 368,
+    "h": 368,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "retratos",
+    "nota": "Retrato para la caja de dialogo: madre, gesto \"calma\". Caricatura, ojos grandes, trazo grueso. Paleta fria (presente)."
+  },
+  {
+    "id": "retrato_madre_lejos",
+    "archivo": "retratos/madre_lejos.png",
+    "w": 368,
+    "h": 368,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "retratos",
+    "nota": "Retrato para la caja de dialogo: madre, gesto \"lejos\". Caricatura, ojos grandes, trazo grueso. Paleta fria (presente)."
+  },
+  {
+    "id": "retrato_madre_joven_miedo",
+    "archivo": "retratos/madre_joven_miedo.png",
+    "w": 368,
+    "h": 368,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "retratos",
+    "nota": "Retrato para la caja de dialogo: madre_joven, gesto \"miedo\". Caricatura, ojos grandes, trazo grueso. Paleta sepia (recuerdo)."
+  },
+  {
+    "id": "retrato_madre_joven_calma",
+    "archivo": "retratos/madre_joven_calma.png",
+    "w": 368,
+    "h": 368,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "retratos",
+    "nota": "Retrato para la caja de dialogo: madre_joven, gesto \"calma\". Caricatura, ojos grandes, trazo grueso. Paleta sepia (recuerdo)."
+  },
+  {
+    "id": "retrato_abuela_calma",
+    "archivo": "retratos/abuela_calma.png",
+    "w": 368,
+    "h": 368,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "retratos",
+    "nota": "Retrato para la caja de dialogo: abuela, gesto \"calma\". Caricatura, ojos grandes, trazo grueso. Paleta fria (presente)."
+  },
+  {
+    "id": "retrato_abuela_lejos",
+    "archivo": "retratos/abuela_lejos.png",
+    "w": 368,
+    "h": 368,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "retratos",
+    "nota": "Retrato para la caja de dialogo: abuela, gesto \"lejos\". Caricatura, ojos grandes, trazo grueso. Paleta fria (presente)."
+  },
+  {
+    "id": "retrato_abuela_joven_miedo",
+    "archivo": "retratos/abuela_joven_miedo.png",
+    "w": 368,
+    "h": 368,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "retratos",
+    "nota": "Retrato para la caja de dialogo: abuela_joven, gesto \"miedo\". Caricatura, ojos grandes, trazo grueso. Paleta sepia (recuerdo)."
+  },
+  {
+    "id": "retrato_abuela_joven_calma",
+    "archivo": "retratos/abuela_joven_calma.png",
+    "w": 368,
+    "h": 368,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "retratos",
+    "nota": "Retrato para la caja de dialogo: abuela_joven, gesto \"calma\". Caricatura, ojos grandes, trazo grueso. Paleta sepia (recuerdo)."
+  },
+  {
+    "id": "retrato_senora_pena",
+    "archivo": "retratos/senora_pena.png",
+    "w": 368,
+    "h": 368,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "retratos",
+    "nota": "Retrato para la caja de dialogo: senora, gesto \"pena\". Caricatura, ojos grandes, trazo grueso. Paleta fria (presente)."
+  },
+  {
+    "id": "retrato_senora_lejos",
+    "archivo": "retratos/senora_lejos.png",
+    "w": 368,
+    "h": 368,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "retratos",
+    "nota": "Retrato para la caja de dialogo: senora, gesto \"lejos\". Caricatura, ojos grandes, trazo grueso. Paleta fria (presente)."
+  },
+  {
+    "id": "retrato_aljibe_lejos",
+    "archivo": "retratos/aljibe_lejos.png",
+    "w": 368,
+    "h": 368,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "retratos",
+    "nota": "Retrato para la caja de dialogo: aljibe, gesto \"lejos\". Caricatura, ojos grandes, trazo grueso. Paleta fria (presente)."
+  },
+  {
+    "id": "retrato_reflejo_calma",
+    "archivo": "retratos/reflejo_calma.png",
+    "w": 368,
+    "h": 368,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "retratos",
+    "nota": "Retrato para la caja de dialogo: reflejo, gesto \"calma\". Caricatura, ojos grandes, trazo grueso. Paleta sepia (recuerdo)."
+  },
+  {
+    "id": "retrato_nina_calma",
+    "archivo": "retratos/nina_calma.png",
+    "w": 368,
+    "h": 368,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "retratos",
+    "nota": "Retrato para la caja de dialogo: nina, gesto \"calma\". Caricatura, ojos grandes, trazo grueso. Paleta sepia (recuerdo)."
+  },
+  {
+    "id": "retrato_nina_lejos",
+    "archivo": "retratos/nina_lejos.png",
+    "w": 368,
+    "h": 368,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "retratos",
+    "nota": "Retrato para la caja de dialogo: nina, gesto \"lejos\". Caricatura, ojos grandes, trazo grueso. Paleta sepia (recuerdo)."
+  },
+  {
+    "id": "retrato_josefina_calma",
+    "archivo": "retratos/josefina_calma.png",
+    "w": 368,
+    "h": 368,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "retratos",
+    "nota": "Retrato para la caja de dialogo: josefina, gesto \"calma\". Caricatura, ojos grandes, trazo grueso. Paleta fria (presente)."
+  },
+  {
+    "id": "retrato_josefina_lejos",
+    "archivo": "retratos/josefina_lejos.png",
+    "w": 368,
+    "h": 368,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "retratos",
+    "nota": "Retrato para la caja de dialogo: josefina, gesto \"lejos\". Caricatura, ojos grandes, trazo grueso. Paleta fria (presente)."
+  },
+  {
+    "id": "telon_presente",
+    "archivo": "telones/presente.png",
+    "w": 3800,
+    "h": 1080,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "telones",
+    "nota": "Telon del PRESENTE, el que se ve de frente. La casa de noche y, a la derecha (desde x=5300 del mundo), el patio de la Senora hoy, descuidado. Cada px equivale a 2.5 unidades del mundo; el piso del escenario queda a 1/3 desde abajo."
+  },
+  {
+    "id": "telon_recuerdo",
+    "archivo": "telones/recuerdo.png",
+    "w": 3800,
+    "h": 1080,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "telones",
+    "nota": "Telon del RECUERDO, el que se ve desde atras del escenario (por eso el mundo esta espejado: el comienzo del juego queda a la DERECHA de la imagen). Una siesta en Corrientes, como foto vieja pasada de luz."
+  },
+  {
+    "id": "cama",
+    "archivo": "objetos/cama.png",
+    "w": 360,
+    "h": 200,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "objetos",
+    "nota": "La cama de Josefina (presente)."
+  },
+  {
+    "id": "velador",
+    "archivo": "objetos/velador.png",
+    "w": 88,
+    "h": 220,
+    "cuadros": 2,
+    "fps": 4,
+    "grupo": "objetos",
+    "nota": "El velador encendido (presente). 2 cuadros de titileo."
+  },
+  {
+    "id": "tele",
+    "archivo": "objetos/tele.png",
+    "w": 300,
+    "h": 280,
+    "cuadros": 2,
+    "fps": 12,
+    "grupo": "objetos",
+    "nota": "El televisor prendido con estatica (presente)."
+  },
+  {
+    "id": "piano",
+    "archivo": "objetos/piano.png",
+    "w": 520,
+    "h": 440,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "objetos",
+    "nota": "El piano de la madre, que de noche toca el diablo (presente)."
+  },
+  {
+    "id": "pared_presente",
+    "archivo": "limites/pared_presente.png",
+    "w": 512,
+    "h": 512,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "limites",
+    "nota": "El empapelado de la casa (presente). TILEABLE en las dos direcciones: se repite sobre las paredes de verdad, las que cortan el paso y tapan la vista."
+  },
+  {
+    "id": "pared_recuerdo",
+    "archivo": "limites/pared_recuerdo.png",
+    "w": 512,
+    "h": 512,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "limites",
+    "nota": "La pared de cal de la casa de los tíos (recuerdo). TILEABLE en las dos direcciones."
+  },
+  {
+    "id": "puerta_presente",
+    "archivo": "limites/puerta_presente.png",
+    "w": 240,
+    "h": 660,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "limites",
+    "nota": "La hoja de una puerta de la casa, cerrada, de frente (presente). Va encastrada en la pared."
+  },
+  {
+    "id": "puerta_recuerdo",
+    "archivo": "limites/puerta_recuerdo.png",
+    "w": 240,
+    "h": 660,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "limites",
+    "nota": "La hoja de una puerta de la casa de los tíos, con postigo, cerrada (recuerdo)."
+  },
+  {
+    "id": "puerta_trabada",
+    "archivo": "limites/puerta_trabada.png",
+    "w": 240,
+    "h": 660,
+    "cuadros": 2,
+    "fps": 0,
+    "grupo": "limites",
+    "nota": "La puerta después del piano: trabada con una silla (cuadro 1) y suelta (cuadro 2). Cuando suena la canción, la hoja gira y se abre."
+  },
+  {
+    "id": "barricada",
+    "archivo": "limites/barricada.png",
+    "w": 400,
+    "h": 440,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "limites",
+    "nota": "Muebles apilados contra una puerta cerrada (colchón, sillas, cajas): se encerró ella misma. Va parado delante de la pared."
+  },
+  {
+    "id": "trastos",
+    "archivo": "limites/trastos.png",
+    "w": 400,
+    "h": 700,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "limites",
+    "nota": "El fondo del cuarto, al principio del presente: un ropero y cajas apiladas. No se puede ir más atrás."
+  },
+  {
+    "id": "ropero",
+    "archivo": "limites/ropero.png",
+    "w": 400,
+    "h": 700,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "limites",
+    "nota": "El fondo de la casa de los tíos, al principio del recuerdo: un ropero con espejo y una valija arriba."
+  },
+  {
+    "id": "porton",
+    "archivo": "limites/porton.png",
+    "w": 500,
+    "h": 560,
+    "cuadros": 2,
+    "fps": 0,
+    "grupo": "limites",
+    "nota": "El portón del fondo del patio de la Señora: cerrado (cuadro 1) hasta que ella habla con la Señora; después, abierto (cuadro 2) hacia el aljibe."
+  },
+  {
+    "id": "objeto_espejo",
+    "archivo": "sombras/objeto_espejo.png",
+    "w": 200,
+    "h": 200,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "sombras",
+    "nota": "El espejito de mano de Mariela: mirarse, ser mirada, quedar linda. Es lo que le dan a Josefina: aparece colgado de su sombra (parpadeando) y en el prólogo pasa de la sombra de cada una a la de la nena. El juego lo pinta de negro: tiene que reconocerse solo por la silueta."
+  },
+  {
+    "id": "objeto_llave",
+    "archivo": "sombras/objeto_llave.png",
+    "w": 200,
+    "h": 200,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "sombras",
+    "nota": "La llave de la casa, de la madre: cerrar todo, no salir sola. Es lo que le dan a Josefina: aparece colgado de su sombra (parpadeando) y en el prólogo pasa de la sombra de cada una a la de la nena. El juego lo pinta de negro: tiene que reconocerse solo por la silueta."
+  },
+  {
+    "id": "objeto_rosario",
+    "archivo": "sombras/objeto_rosario.png",
+    "w": 200,
+    "h": 200,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "sombras",
+    "nota": "El rosario de la abuela: rezar, la culpa, que si el cielo se cae es por una. Es lo que le dan a Josefina: aparece colgado de su sombra (parpadeando) y en el prólogo pasa de la sombra de cada una a la de la nena. El juego lo pinta de negro: tiene que reconocerse solo por la silueta."
+  },
+  {
+    "id": "sombra_mariela",
+    "archivo": "sombras/sombra_mariela.png",
+    "w": 240,
+    "h": 600,
+    "cuadros": 4,
+    "fps": 5,
+    "grupo": "sombras",
+    "nota": "Mariela, como sombra larga proyectada en una pared por una luz baja. Se usa en el prólogo (las sombras que se escurren hacia la nena dormida) y en el camino final (las sombras aceptadas caminan junto a Josefina). El juego la pinta de negro. Loop de 4 cuadros (un temblor leve)."
+  },
+  {
+    "id": "sombra_madre",
+    "archivo": "sombras/sombra_madre.png",
+    "w": 240,
+    "h": 600,
+    "cuadros": 4,
+    "fps": 5,
+    "grupo": "sombras",
+    "nota": "La madre, con las manos en la boca, como sombra larga proyectada en una pared por una luz baja. Se usa en el prólogo (las sombras que se escurren hacia la nena dormida) y en el camino final (las sombras aceptadas caminan junto a Josefina). El juego la pinta de negro. Loop de 4 cuadros (un temblor leve)."
+  },
+  {
+    "id": "sombra_abuela",
+    "archivo": "sombras/sombra_abuela.png",
+    "w": 240,
+    "h": 600,
+    "cuadros": 4,
+    "fps": 5,
+    "grupo": "sombras",
+    "nota": "La abuela, rezando, como sombra larga proyectada en una pared por una luz baja. Se usa en el prólogo (las sombras que se escurren hacia la nena dormida) y en el camino final (las sombras aceptadas caminan junto a Josefina). El juego la pinta de negro. Loop de 4 cuadros (un temblor leve)."
+  },
+  {
+    "id": "sombra_senora",
+    "archivo": "sombras/sombra_senora.png",
+    "w": 240,
+    "h": 600,
+    "cuadros": 4,
+    "fps": 5,
+    "grupo": "sombras",
+    "nota": "La Señora, con los brazos arriba, como sombra larga proyectada en una pared por una luz baja. Se usa en el prólogo (las sombras que se escurren hacia la nena dormida) y en el camino final (las sombras aceptadas caminan junto a Josefina). El juego la pinta de negro. Loop de 4 cuadros (un temblor leve)."
+  },
+  {
+    "id": "aljibe_presente",
+    "archivo": "objetos/aljibe_presente.png",
+    "w": 520,
+    "h": 640,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "objetos",
+    "nota": "El aljibe hoy: la cal descascarada, el ladrillo rojo a la vista, casi oculto entre pastos."
+  },
+  {
+    "id": "aljibe_recuerdo",
+    "archivo": "objetos/aljibe_recuerdo.png",
+    "w": 520,
+    "h": 640,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "objetos",
+    "nota": "El aljibe en el recuerdo: pintado de blanco."
+  },
+  {
+    "id": "altar_presente",
+    "archivo": "objetos/altar_presente.png",
+    "w": 480,
+    "h": 800,
+    "cuadros": 2,
+    "fps": 2,
+    "grupo": "objetos",
+    "nota": "El altar hoy: un San La Muerte enorme, del tamano de un crucifijo de iglesia, con lucecitas de guirnalda navidena en las cuencas (2 cuadros: prendidas/apagadas)."
+  },
+  {
+    "id": "altar_recuerdo",
+    "archivo": "objetos/altar_recuerdo.png",
+    "w": 480,
+    "h": 800,
+    "cuadros": 2,
+    "fps": 2,
+    "grupo": "objetos",
+    "nota": "El altar en el recuerdo: ofrendas, escarpines, estampitas, rosarios, un San La Muerte chico."
+  },
+  {
+    "id": "planta_presente",
+    "archivo": "objetos/planta_presente.png",
+    "w": 360,
+    "h": 480,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "objetos",
+    "nota": "Ruda crecida hasta alturas insolitas y rosas muertas (presente)."
+  },
+  {
+    "id": "planta_recuerdo",
+    "archivo": "objetos/planta_recuerdo.png",
+    "w": 360,
+    "h": 480,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "objetos",
+    "nota": "Plantas del patio, azucenas, ruda (recuerdo)."
+  },
+  {
+    "id": "ventilador",
+    "archivo": "objetos/ventilador.png",
+    "w": 180,
+    "h": 500,
+    "cuadros": 3,
+    "fps": 10,
+    "grupo": "objetos",
+    "nota": "Ventilador de pie en la casa de los tios (recuerdo). 3 cuadros girando."
+  },
+  {
+    "id": "mesa_mandarinas",
+    "archivo": "objetos/mesa_mandarinas.png",
+    "w": 360,
+    "h": 220,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "objetos",
+    "nota": "Mesa con mandarinas y cascaras (recuerdo)."
+  },
+  {
+    "id": "banqueta",
+    "archivo": "objetos/banqueta.png",
+    "w": 140,
+    "h": 120,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "objetos",
+    "nota": "Banqueta (recuerdo)."
+  },
+  {
+    "id": "sillon",
+    "archivo": "objetos/sillon.png",
+    "w": 400,
+    "h": 280,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "objetos",
+    "nota": "El sillon de la Senora, donde la nina se durmio (recuerdo)."
+  },
+  {
+    "id": "biombo",
+    "archivo": "efectos/biombo.png",
+    "w": 520,
+    "h": 560,
+    "cuadros": 4,
+    "fps": 6,
+    "grupo": "efectos",
+    "nota": "Biombo de papel con la sombra enorme de quien tiene miedo, proyectada por la luz de la siesta (recuerdo). Loop de 4 cuadros."
+  },
+  {
+    "id": "biombo_vacio",
+    "archivo": "efectos/biombo_vacio.png",
+    "w": 520,
+    "h": 560,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "efectos",
+    "nota": "El mismo biombo, sin sombra: despues de que la nina se llevo el miedo."
+  },
+  {
+    "id": "pantano",
+    "archivo": "efectos/pantano.png",
+    "w": 512,
+    "h": 200,
+    "cuadros": 4,
+    "fps": 6,
+    "grupo": "efectos",
+    "nota": "El pantano: barro negro que sube desde el piso cuando Josefina no tararea. TILEABLE en horizontal. Loop de 4 cuadros."
+  },
+  {
+    "id": "vela",
+    "archivo": "efectos/vela.png",
+    "w": 48,
+    "h": 100,
+    "cuadros": 2,
+    "fps": 8,
+    "grupo": "efectos",
+    "nota": "Vela encendida, 2 cuadros."
+  },
+  {
+    "id": "pro_ruta",
+    "archivo": "prologo/ruta.png",
+    "w": 1920,
+    "h": 540,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "prologo",
+    "nota": "La ruta de noche, viajando a Corrientes. TILEABLE en horizontal (el borde derecho continua en el izquierdo)."
+  },
+  {
+    "id": "pro_renault",
+    "archivo": "prologo/renault12.png",
+    "w": 600,
+    "h": 260,
+    "cuadros": 2,
+    "fps": 8,
+    "grupo": "prologo",
+    "nota": "El Renault 12 con la familia: el padre maneja, la madre adelante, atras la abuela, la nena apretada en el medio y la hermana. Mirando a la DERECHA. 2 cuadros de traqueteo."
+  },
+  {
+    "id": "pro_patio",
+    "archivo": "prologo/patio_siesta.png",
+    "w": 1920,
+    "h": 1080,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "prologo",
+    "nota": "El patio de la Senora a la hora de la siesta, visto de frente."
+  },
+  {
+    "id": "pro_reflejo",
+    "archivo": "prologo/reflejo.png",
+    "w": 720,
+    "h": 720,
+    "cuadros": 4,
+    "fps": 4,
+    "grupo": "prologo",
+    "nota": "Visto desde arriba, adentro del aljibe: su cara en el agua negra, como una luna con el pelo rubio. SOLO el círculo del agua: afuera del círculo, transparente (el borde del aljibe lo dibuja el juego). 4 cuadros de ondas."
+  },
+  {
+    "id": "pro_cuarto",
+    "archivo": "prologo/cuarto_altar.png",
+    "w": 1920,
+    "h": 1080,
+    "cuadros": 1,
+    "fps": 0,
+    "grupo": "prologo",
+    "nota": "El cuarto del altar, en penumbra de siesta."
+  }
+]

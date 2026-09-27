@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><title>Audere · compendio de imágenes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+<style>
+:root{--f:#0b0e12;--p:#e8e3d8;--g:#8e9aa6;--c:#efcf95}
+*{box-sizing:border-box}body{margin:0;background:var(--f);color:var(--p);font:15px/1.55 Georgia,serif}
+header{padding:56px 24px 28px;max-width:1200px;margin:auto}
+h1{font-family:Gloock,Georgia,serif;font-weight:400;font-size:64px;margin:0;letter-spacing:.02em}
+h2{font-family:Gloock,Georgia,serif;font-weight:400;font-size:30px;margin:48px 0 6px}
+.lede{color:var(--g);max-width:760px}
+.reglas{border:1px solid #2a3440;padding:18px 22px;max-width:900px;margin-top:22px}
+.reglas li{margin:6px 0}
+section{max-width:1200px;margin:auto;padding:0 24px}
+.intro{color:var(--g);margin-top:0}
+.grilla{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px}
+article{background:#121820;border:1px solid #232d38;padding:14px}
+.marco{height:250px;display:flex;align-items:center;justify-content:center;background:
+ repeating-conic-gradient(#1a212a 0 25%,#141a22 0 50%) 0 0/20px 20px;margin-bottom:10px}
+.spr{background-repeat:no-repeat;image-rendering:auto}
+h3{font-family:Gloock,Georgia,serif;font-weight:400;font-size:19px;margin:4px 0 0}
+.archivo{font:12px ui-monospace,Consolas,monospace;color:var(--c);margin:2px 0 8px;word-break:break-all}
+table{font-size:13px;color:var(--g);border-collapse:collapse}td{padding:1px 10px 1px 0}
+.nota{font-size:13.5px}
+a{color:var(--c)}
+.tabla{width:100%;border-collapse:collapse;font-size:14px;margin:10px 0 30px}.tabla td,.tabla th{border-top:1px solid #232d38;padding:8px 10px;vertical-align:top;text-align:left;color:var(--p)}.tabla th{color:var(--g);font-weight:400}.tabla code{color:var(--c);font-size:12px}audio{height:30px;width:220px}
+footer{max-width:1200px;margin:60px auto;padding:0 24px;color:var(--g);font-size:13px}
+.a_josefina_quieta{animation:a_josefina_quieta 1.00s steps(4) infinite}@keyframes a_josefina_quieta{to{background-position:-734px 0}}
+.a_josefina_camina{animation:a_josefina_camina 0.80s steps(8) infinite}@keyframes a_josefina_camina{to{background-position:-1468px 0}}
+.a_josefina_tararea{animation:a_josefina_tararea 0.67s steps(4) infinite}@keyframes a_josefina_tararea{to{background-position:-734px 0}}
+.a_josefina_tiembla{animation:a_josefina_tiembla 0.33s steps(4) infinite}@keyframes a_josefina_tiembla{to{background-position:-734px 0}}
+.a_josefina_cae{animation:a_josefina_cae 0.75s steps(6) infinite}@keyframes a_josefina_cae{to{background-position:-1101px 0}}
+.a_nina_quieta{animation:a_nina_quieta 1.00s steps(4) infinite}@keyframes a_nina_quieta{to{background-position:-734px 0}}
+.a_nina_camina{animation:a_nina_camina 0.80s steps(8) infinite}@keyframes a_nina_camina{to{background-position:-1468px 0}}
+.a_nina_tararea{animation:a_nina_tararea 0.67s steps(4) infinite}@keyframes a_nina_tararea{to{background-position:-734px 0}}
+.a_mariela{animation:a_mariela 1.33s steps(4) infinite}@keyframes a_mariela{to{background-position:-840px 0}}
+.a_mariela_nina{animation:a_mariela_nina 0.40s steps(4) infinite}@keyframes a_mariela_nina{to{background-position:-840px 0}}
+.a_madre{animation:a_madre 1.33s steps(4) infinite}@keyframes a_madre{to{background-position:-840px 0}}
+.a_madre_joven{animation:a_madre_joven 0.40s steps(4) infinite}@keyframes a_madre_joven{to{background-position:-840px 0}}
+.a_abuela{animation:a_abuela 1.33s steps(4) infinite}@keyframes a_abuela{to{background-position:-840px 0}}
+.a_abuela_joven{animation:a_abuela_joven 0.40s steps(4) infinite}@keyframes a_abuela_joven{to{background-position:-840px 0}}
+.a_senora{animation:a_senora 1.33s steps(4) infinite}@keyframes a_senora{to{background-position:-840px 0}}
+.a_mariela_frente{animation:a_mariela_frente 1.33s steps(4) infinite}@keyframes a_mariela_frente{to{background-position:-840px 0}}
+.a_mariela_nina_frente{animation:a_mariela_nina_frente 0.40s steps(4) infinite}@keyframes a_mariela_nina_frente{to{background-position:-840px 0}}
+.a_madre_frente{animation:a_madre_frente 1.33s steps(4) infinite}@keyframes a_madre_frente{to{background-position:-840px 0}}
+.a_madre_joven_frente{animation:a_madre_joven_frente 0.40s steps(4) infinite}@keyframes a_madre_joven_frente{to{background-position:-840px 0}}
+.a_abuela_frente{animation:a_abuela_frente 1.33s steps(4) infinite}@keyframes a_abuela_frente{to{background-position:-840px 0}}
+.a_abuela_joven_frente{animation:a_abuela_joven_frente 0.40s steps(4) infinite}@keyframes a_abuela_joven_frente{to{background-position:-840px 0}}
+.a_senora_frente{animation:a_senora_frente 1.33s steps(4) infinite}@keyframes a_senora_frente{to{background-position:-840px 0}}
+.a_josefina_frente{animation:a_josefina_frente 1.33s steps(4) infinite}@keyframes a_josefina_frente{to{background-position:-840px 0}}
+.a_nina_frente{animation:a_nina_frente 1.33s steps(4) infinite}@keyframes a_nina_frente{to{background-position:-840px 0}}
+.a_mariela_oscura{animation:a_mariela_oscura 0.67s steps(4) infinite}@keyframes a_mariela_oscura{to{background-position:-840px 0}}
+.a_mariela_oscura_frente{animation:a_mariela_oscura_frente 0.67s steps(4) infinite}@keyframes a_mariela_oscura_frente{to{background-position:-840px 0}}
+.a_madre_oscura{animation:a_madre_oscura 0.67s steps(4) infinite}@keyframes a_madre_oscura{to{background-position:-840px 0}}
+.a_madre_oscura_frente{animation:a_madre_oscura_frente 0.67s steps(4) infinite}@keyframes a_madre_oscura_frente{to{background-position:-840px 0}}
+.a_abuela_oscura{animation:a_abuela_oscura 0.67s steps(4) infinite}@keyframes a_abuela_oscura{to{background-position:-840px 0}}
+.a_abuela_oscura_frente{animation:a_abuela_oscura_frente 0.67s steps(4) infinite}@keyframes a_abuela_oscura_frente{to{background-position:-840px 0}}
+.a_sombra{animation:a_sombra 0.75s steps(6) infinite}@keyframes a_sombra{to{background-position:-1440px 0}}
+.a_miedo_mariela{animation:a_miedo_mariela 0.75s steps(6) infinite}@keyframes a_miedo_mariela{to{background-position:-1440px 0}}
+.a_miedo_madre{animation:a_miedo_madre 0.75s steps(6) infinite}@keyframes a_miedo_madre{to{background-position:-1440px 0}}
+.a_miedo_abuela{animation:a_miedo_abuela 0.75s steps(6) infinite}@keyframes a_miedo_abuela{to{background-position:-1440px 0}}
+.a_sombra_mariela{animation:a_sombra_mariela 0.80s steps(4) infinite}@keyframes a_sombra_mariela{to{background-position:-384px 0}}
+.a_sombra_madre{animation:a_sombra_madre 0.80s steps(4) infinite}@keyframes a_sombra_madre{to{background-position:-384px 0}}
+.a_sombra_abuela{animation:a_sombra_abuela 0.80s steps(4) infinite}@keyframes a_sombra_abuela{to{background-position:-384px 0}}
+.a_sombra_senora{animation:a_sombra_senora 0.80s steps(4) infinite}@keyframes a_sombra_senora{to{background-position:-384px 0}}
+.a_velador{animation:a_velador 0.50s steps(2) infinite}@keyframes a_velador{to{background-position:-176px 0}}
+.a_tele{animation:a_tele 0.17s steps(2) infinite}@keyframes a_tele{to{background-position:-480px 0}}
+.a_altar_presente{animation:a_altar_presente 1.00s steps(2) infinite}@keyframes a_altar_presente{to{background-position:-288px 0}}
+.a_altar_recuerdo{animation:a_altar_recuerdo 1.00s steps(2) infinite}@keyframes a_altar_recuerdo{to{background-position:-288px 0}}
+.a_ventilador{animation:a_ventilador 0.30s steps(3) infinite}@keyframes a_ventilador{to{background-position:-259px 0}}
+.a_biombo{animation:a_biombo 0.67s steps(4) infinite}@keyframes a_biombo{to{background-position:-891px 0}}
+.a_pantano{animation:a_pantano 0.67s steps(4) infinite}@keyframes a_pantano{to{background-position:-960px 0}}
+.a_vela{animation:a_vela 0.25s steps(2) infinite}@keyframes a_vela{to{background-position:-96px 0}}
+.a_pro_renault{animation:a_pro_renault 0.25s steps(2) infinite}@keyframes a_pro_renault{to{background-position:-480px 0}}
+.a_pro_reflejo{animation:a_pro_reflejo 1.00s steps(4) infinite}@keyframes a_pro_reflejo{to{background-position:-960px 0}}
+
+</style></head><body>
+<header>
+<h1>AUDERE</h1>
+<p class="lede">Compendio de imágenes del juego. Cada imagen de esta página es una <b>plantilla provisoria</b>: tiene el tamaño, la cantidad de cuadros y el encuadre correctos. Hay que dibujar encima y devolver el PNG con <b>el mismo nombre y el mismo tamaño</b>.</p>
+<div class="reglas"><b>Reglas para que el reemplazo sea directo</b><ul>
+<li><b>Mismo tamaño de PNG.</b> Si una hoja tiene 8 cuadros de 260 × 340, el PNG mide 2080 × 340.</li>
+<li><b>Cuadros en una tira horizontal</b>, de izquierda a derecha, todos del mismo ancho y sin espacio entre ellos.</li>
+<li><b>Fondo transparente</b> en personajes, objetos y efectos. Los telones y el prólogo van opacos.</li>
+<li><b>Los pies (o la base) tocan el borde de abajo</b>, centrados. No mover al personaje dentro del cuadro entre un cuadro y otro, salvo que la animación lo pida.</li>
+<li><b>Dirección:</b> la protagonista mira a la derecha; las figuras de perfil, a la izquierda. Los "frentes" miran a cámara.</li>
+<li><b>Dos épocas:</b> el <i>presente</i> es de noche, frío, azulado; el <i>recuerdo</i> es una siesta en Corrientes, como una foto vieja, sepia y pasada de luz.</li>
+<li>La protagonista se entrega <b>limpia</b>: las manchas de tinta las agrega el juego.</li>
+</ul></div>
+</header>
+<section><h2>Personajes de perfil</h2><p class="intro">Se ven en el presente (de frente al escenario) y en el recuerdo (desde atrás). Los pies van en el centro del borde de abajo. La protagonista mira a la derecha; las figuras, a la izquierda.</p><div class="grilla">
+      <article>
+        <div class="marco"><div class="spr a_josefina_quieta" style="width:184px;height:240px;background-image:url('personajes/josefina_quieta.png');background-size:734px 240px"></div></div>
+        <h3>josefina_quieta</h3>
+        <p class="archivo">personajes/josefina_quieta.png</p>
+        <table>
+          <tr><td>cuadro</td><td>260 × 340 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 4 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>1040 × 340 px</td></tr>
+        </table>
+        <p class="nota">Josefina, en el presente. De perfil mirando a la DERECHA, los pies en el centro de abajo. respira quieta. Las manchas de tinta las agrega el juego encima: dibujarla limpia.</p>
+        <a href="personajes/josefina_quieta.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_josefina_camina" style="width:184px;height:240px;background-image:url('personajes/josefina_camina.png');background-size:1468px 240px"></div></div>
+        <h3>josefina_camina</h3>
+        <p class="archivo">personajes/josefina_camina.png</p>
+        <table>
+          <tr><td>cuadro</td><td>260 × 340 px</td></tr>
+          <tr><td>cuadros</td><td>8 · 10 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>2080 × 340 px</td></tr>
+        </table>
+        <p class="nota">Josefina, en el presente. De perfil mirando a la DERECHA, los pies en el centro de abajo. ciclo de caminata completo. Las manchas de tinta las agrega el juego encima: dibujarla limpia.</p>
+        <a href="personajes/josefina_camina.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_josefina_tararea" style="width:184px;height:240px;background-image:url('personajes/josefina_tararea.png');background-size:734px 240px"></div></div>
+        <h3>josefina_tararea</h3>
+        <p class="archivo">personajes/josefina_tararea.png</p>
+        <table>
+          <tr><td>cuadro</td><td>260 × 340 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 6 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>1040 × 340 px</td></tr>
+        </table>
+        <p class="nota">Josefina, en el presente. De perfil mirando a la DERECHA, los pies en el centro de abajo. tararea con la boca cerrada, la cabeza apenas levantada. Las manchas de tinta las agrega el juego encima: dibujarla limpia.</p>
+        <a href="personajes/josefina_tararea.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_josefina_tiembla" style="width:184px;height:240px;background-image:url('personajes/josefina_tiembla.png');background-size:734px 240px"></div></div>
+        <h3>josefina_tiembla</h3>
+        <p class="archivo">personajes/josefina_tiembla.png</p>
+        <table>
+          <tr><td>cuadro</td><td>260 × 340 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 12 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>1040 × 340 px</td></tr>
+        </table>
+        <p class="nota">Josefina, en el presente. De perfil mirando a la DERECHA, los pies en el centro de abajo. tiembla, se abraza. Las manchas de tinta las agrega el juego encima: dibujarla limpia.</p>
+        <a href="personajes/josefina_tiembla.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_josefina_cae" style="width:184px;height:240px;background-image:url('personajes/josefina_cae.png');background-size:1101px 240px"></div></div>
+        <h3>josefina_cae</h3>
+        <p class="archivo">personajes/josefina_cae.png</p>
+        <table>
+          <tr><td>cuadro</td><td>260 × 340 px</td></tr>
+          <tr><td>cuadros</td><td>6 · 8 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>1560 × 340 px</td></tr>
+        </table>
+        <p class="nota">Josefina, en el presente. De perfil mirando a la DERECHA, los pies en el centro de abajo. se cae sentada (el final "no pudo"); el ultimo cuadro queda quieto. Las manchas de tinta las agrega el juego encima: dibujarla limpia.</p>
+        <a href="personajes/josefina_cae.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_nina_quieta" style="width:184px;height:240px;background-image:url('personajes/nina_quieta.png');background-size:734px 240px"></div></div>
+        <h3>nina_quieta</h3>
+        <p class="archivo">personajes/nina_quieta.png</p>
+        <table>
+          <tr><td>cuadro</td><td>260 × 340 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 4 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>1040 × 340 px</td></tr>
+        </table>
+        <p class="nota">Josefina a los seis anos, en el recuerdo: rubia, vestido claro. De perfil mirando a la DERECHA. respira quieta.</p>
+        <a href="personajes/nina_quieta.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_nina_camina" style="width:184px;height:240px;background-image:url('personajes/nina_camina.png');background-size:1468px 240px"></div></div>
+        <h3>nina_camina</h3>
+        <p class="archivo">personajes/nina_camina.png</p>
+        <table>
+          <tr><td>cuadro</td><td>260 × 340 px</td></tr>
+          <tr><td>cuadros</td><td>8 · 10 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>2080 × 340 px</td></tr>
+        </table>
+        <p class="nota">Josefina a los seis anos, en el recuerdo: rubia, vestido claro. De perfil mirando a la DERECHA. caminata.</p>
+        <a href="personajes/nina_camina.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_nina_tararea" style="width:184px;height:240px;background-image:url('personajes/nina_tararea.png');background-size:734px 240px"></div></div>
+        <h3>nina_tararea</h3>
+        <p class="archivo">personajes/nina_tararea.png</p>
+        <table>
+          <tr><td>cuadro</td><td>260 × 340 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 6 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>1040 × 340 px</td></tr>
+        </table>
+        <p class="nota">Josefina a los seis anos, en el recuerdo: rubia, vestido claro. De perfil mirando a la DERECHA. tararea.</p>
+        <a href="personajes/nina_tararea.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_nina_duerme" style="width:184px;height:240px;background-image:url('personajes/nina_duerme.png');background-size:184px 240px"></div></div>
+        <h3>nina_duerme</h3>
+        <p class="archivo">personajes/nina_duerme.png</p>
+        <table>
+          <tr><td>cuadro</td><td>260 × 340 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>260 × 340 px</td></tr>
+        </table>
+        <p class="nota">Josefina a los seis anos, en el recuerdo: rubia, vestido claro. De perfil mirando a la DERECHA. dormida, sentada (para el sillon del prologo).</p>
+        <a href="personajes/nina_duerme.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_mariela" style="width:210px;height:240px;background-image:url('personajes/mariela.png');background-size:840px 240px"></div></div>
+        <h3>mariela</h3>
+        <p class="archivo">personajes/mariela.png</p>
+        <table>
+          <tr><td>cuadro</td><td>420 × 480 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 3 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>1680 × 480 px</td></tr>
+        </table>
+        <p class="nota">Mariela hoy: linda, suelta, fumando en la puerta antes de salir. De perfil mirando a la IZQUIERDA (hacia donde viene la protagonista). Loop de 4 cuadros.</p>
+        <a href="personajes/mariela.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_mariela_nina" style="width:210px;height:240px;background-image:url('personajes/mariela_nina.png');background-size:840px 240px"></div></div>
+        <h3>mariela_nina</h3>
+        <p class="archivo">personajes/mariela_nina.png</p>
+        <table>
+          <tr><td>cuadro</td><td>420 × 480 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 10 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>1680 × 480 px</td></tr>
+        </table>
+        <p class="nota">Mariela a los ocho, en el recuerdo: sentada, abraza un muneco de ojos que brillan. Tiene miedo. De perfil mirando a la IZQUIERDA (hacia donde viene la protagonista). Loop de 4 cuadros.</p>
+        <a href="personajes/mariela_nina.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_madre" style="width:210px;height:240px;background-image:url('personajes/madre.png');background-size:840px 240px"></div></div>
+        <h3>madre</h3>
+        <p class="archivo">personajes/madre.png</p>
+        <table>
+          <tr><td>cuadro</td><td>420 × 480 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 3 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>1680 × 480 px</td></tr>
+        </table>
+        <p class="nota">La madre hoy: calma, planea vacaciones. Anteojos oscuros. De perfil mirando a la IZQUIERDA (hacia donde viene la protagonista). Loop de 4 cuadros.</p>
+        <a href="personajes/madre.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_madre_joven" style="width:210px;height:240px;background-image:url('personajes/madre_joven.png');background-size:840px 240px"></div></div>
+        <h3>madre_joven</h3>
+        <p class="archivo">personajes/madre_joven.png</p>
+        <table>
+          <tr><td>cuadro</td><td>420 × 480 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 10 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>1680 × 480 px</td></tr>
+        </table>
+        <p class="nota">La madre en el recuerdo: las manos en la boca, asustada. De perfil mirando a la IZQUIERDA (hacia donde viene la protagonista). Loop de 4 cuadros.</p>
+        <a href="personajes/madre_joven.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_abuela" style="width:210px;height:240px;background-image:url('personajes/abuela.png');background-size:840px 240px"></div></div>
+        <h3>abuela</h3>
+        <p class="archivo">personajes/abuela.png</p>
+        <table>
+          <tr><td>cuadro</td><td>420 × 480 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 3 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>1680 × 480 px</td></tr>
+        </table>
+        <p class="nota">La abuela hoy: sentada, pela una mandarina. De perfil mirando a la IZQUIERDA (hacia donde viene la protagonista). Loop de 4 cuadros.</p>
+        <a href="personajes/abuela.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_abuela_joven" style="width:210px;height:240px;background-image:url('personajes/abuela_joven.png');background-size:840px 240px"></div></div>
+        <h3>abuela_joven</h3>
+        <p class="archivo">personajes/abuela_joven.png</p>
+        <table>
+          <tr><td>cuadro</td><td>420 × 480 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 10 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>1680 × 480 px</td></tr>
+        </table>
+        <p class="nota">La abuela en el recuerdo: de rodillas, reza con el rosario para que pare la tormenta. De perfil mirando a la IZQUIERDA (hacia donde viene la protagonista). Loop de 4 cuadros.</p>
+        <a href="personajes/abuela_joven.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_senora" style="width:210px;height:240px;background-image:url('personajes/senora.png');background-size:840px 240px"></div></div>
+        <h3>senora</h3>
+        <p class="archivo">personajes/senora.png</p>
+        <table>
+          <tr><td>cuadro</td><td>420 × 480 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 3 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>1680 × 480 px</td></tr>
+        </table>
+        <p class="nota">La Senora, veinte anos despues: vieja, el pelo gris revuelto, rosarios. De perfil mirando a la IZQUIERDA (hacia donde viene la protagonista). Loop de 4 cuadros.</p>
+        <a href="personajes/senora.png" download>descargar la plantilla</a>
+      </article></div></section><section><h2>Personajes de frente</h2><p class="intro">Así se los ve en primera persona, cuando la protagonista los enfrenta y se abre el diálogo. Mirando a cámara.</p><div class="grilla">
+      <article>
+        <div class="marco"><div class="spr a_mariela_frente" style="width:210px;height:240px;background-image:url('frentes/mariela_frente.png');background-size:840px 240px"></div></div>
+        <h3>mariela_frente</h3>
+        <p class="archivo">frentes/mariela_frente.png</p>
+        <table>
+          <tr><td>cuadro</td><td>420 × 480 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 3 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>1680 × 480 px</td></tr>
+        </table>
+        <p class="nota">Mariela hoy: linda, suelta, fumando en la puerta antes de salir. DE FRENTE, mirando a la camara: es como se la ve en primera persona, cuando se habla con ella.</p>
+        <a href="frentes/mariela_frente.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_mariela_nina_frente" style="width:210px;height:240px;background-image:url('frentes/mariela_nina_frente.png');background-size:840px 240px"></div></div>
+        <h3>mariela_nina_frente</h3>
+        <p class="archivo">frentes/mariela_nina_frente.png</p>
+        <table>
+          <tr><td>cuadro</td><td>420 × 480 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 10 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>1680 × 480 px</td></tr>
+        </table>
+        <p class="nota">Mariela a los ocho, en el recuerdo: sentada, abraza un muneco de ojos que brillan. Tiene miedo. DE FRENTE, mirando a la camara: es como se la ve en primera persona, cuando se habla con ella.</p>
+        <a href="frentes/mariela_nina_frente.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_madre_frente" style="width:210px;height:240px;background-image:url('frentes/madre_frente.png');background-size:840px 240px"></div></div>
+        <h3>madre_frente</h3>
+        <p class="archivo">frentes/madre_frente.png</p>
+        <table>
+          <tr><td>cuadro</td><td>420 × 480 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 3 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>1680 × 480 px</td></tr>
+        </table>
+        <p class="nota">La madre hoy: calma, planea vacaciones. Anteojos oscuros. DE FRENTE, mirando a la camara: es como se la ve en primera persona, cuando se habla con ella.</p>
+        <a href="frentes/madre_frente.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_madre_joven_frente" style="width:210px;height:240px;background-image:url('frentes/madre_joven_frente.png');background-size:840px 240px"></div></div>
+        <h3>madre_joven_frente</h3>
+        <p class="archivo">frentes/madre_joven_frente.png</p>
+        <table>
+          <tr><td>cuadro</td><td>420 × 480 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 10 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>1680 × 480 px</td></tr>
+        </table>
+        <p class="nota">La madre en el recuerdo: las manos en la boca, asustada. DE FRENTE, mirando a la camara: es como se la ve en primera persona, cuando se habla con ella.</p>
+        <a href="frentes/madre_joven_frente.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_abuela_frente" style="width:210px;height:240px;background-image:url('frentes/abuela_frente.png');background-size:840px 240px"></div></div>
+        <h3>abuela_frente</h3>
+        <p class="archivo">frentes/abuela_frente.png</p>
+        <table>
+          <tr><td>cuadro</td><td>420 × 480 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 3 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>1680 × 480 px</td></tr>
+        </table>
+        <p class="nota">La abuela hoy: sentada, pela una mandarina. DE FRENTE, mirando a la camara: es como se la ve en primera persona, cuando se habla con ella.</p>
+        <a href="frentes/abuela_frente.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_abuela_joven_frente" style="width:210px;height:240px;background-image:url('frentes/abuela_joven_frente.png');background-size:840px 240px"></div></div>
+        <h3>abuela_joven_frente</h3>
+        <p class="archivo">frentes/abuela_joven_frente.png</p>
+        <table>
+          <tr><td>cuadro</td><td>420 × 480 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 10 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>1680 × 480 px</td></tr>
+        </table>
+        <p class="nota">La abuela en el recuerdo: de rodillas, reza con el rosario para que pare la tormenta. DE FRENTE, mirando a la camara: es como se la ve en primera persona, cuando se habla con ella.</p>
+        <a href="frentes/abuela_joven_frente.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_senora_frente" style="width:210px;height:240px;background-image:url('frentes/senora_frente.png');background-size:840px 240px"></div></div>
+        <h3>senora_frente</h3>
+        <p class="archivo">frentes/senora_frente.png</p>
+        <table>
+          <tr><td>cuadro</td><td>420 × 480 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 3 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>1680 × 480 px</td></tr>
+        </table>
+        <p class="nota">La Senora, veinte anos despues: vieja, el pelo gris revuelto, rosarios. DE FRENTE, mirando a la camara: es como se la ve en primera persona, cuando se habla con ella.</p>
+        <a href="frentes/senora_frente.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_josefina_frente" style="width:210px;height:240px;background-image:url('frentes/josefina_frente.png');background-size:840px 240px"></div></div>
+        <h3>josefina_frente</h3>
+        <p class="archivo">frentes/josefina_frente.png</p>
+        <table>
+          <tr><td>cuadro</td><td>420 × 480 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 3 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>1680 × 480 px</td></tr>
+        </table>
+        <p class="nota">Josefina grande, DE FRENTE, mirando a cámara: es la que aparece del otro lado del aljibe si se llega desde el recuerdo. Mismo tamaño de cuadro que las figuras.</p>
+        <a href="frentes/josefina_frente.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_nina_frente" style="width:210px;height:240px;background-image:url('frentes/nina_frente.png');background-size:840px 240px"></div></div>
+        <h3>nina_frente</h3>
+        <p class="archivo">frentes/nina_frente.png</p>
+        <table>
+          <tr><td>cuadro</td><td>420 × 480 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 3 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>1680 × 480 px</td></tr>
+        </table>
+        <p class="nota">Josefina nena, DE FRENTE, mirando a cámara: la que aparece del otro lado del aljibe si se llega desde el presente.</p>
+        <a href="frentes/nina_frente.png" download>descargar la plantilla</a>
+      </article></div></section><section><h2>Versiones oscuras</h2><p class="intro">Ellas, en el presente, vistas por Josefina cuando pierde la calma: se vuelven monstruos al acercarse. Mismo encuadre que su versión normal: el juego funde una en la otra.</p><div class="grilla">
+      <article>
+        <div class="marco"><div class="spr a_mariela_oscura" style="width:210px;height:240px;background-image:url('oscuras/mariela_oscura.png');background-size:840px 240px"></div></div>
+        <h3>mariela_oscura</h3>
+        <p class="archivo">oscuras/mariela_oscura.png</p>
+        <table>
+          <tr><td>cuadro</td><td>420 × 480 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 6 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>1680 × 480 px</td></tr>
+        </table>
+        <p class="nota">Mariela hoy, vista por Josefina cuando pierde la calma: la misma pose y el mismo encuadre que mariela.png, pero monstruosa (negra, estirada, ojos de más, dedos larguísimos). Mirando a la IZQUIERDA. El juego funde una en la otra.</p>
+        <a href="oscuras/mariela_oscura.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_mariela_oscura_frente" style="width:210px;height:240px;background-image:url('oscuras/mariela_oscura_frente.png');background-size:840px 240px"></div></div>
+        <h3>mariela_oscura_frente</h3>
+        <p class="archivo">oscuras/mariela_oscura_frente.png</p>
+        <table>
+          <tr><td>cuadro</td><td>420 × 480 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 6 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>1680 × 480 px</td></tr>
+        </table>
+        <p class="nota">Mariela monstruosa, DE FRENTE (primera persona, cuando se habla con ella sin estar tranquila).</p>
+        <a href="oscuras/mariela_oscura_frente.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_madre_oscura" style="width:210px;height:240px;background-image:url('oscuras/madre_oscura.png');background-size:840px 240px"></div></div>
+        <h3>madre_oscura</h3>
+        <p class="archivo">oscuras/madre_oscura.png</p>
+        <table>
+          <tr><td>cuadro</td><td>420 × 480 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 6 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>1680 × 480 px</td></tr>
+        </table>
+        <p class="nota">La madre hoy, vista por Josefina cuando pierde la calma: la misma pose y el mismo encuadre que madre.png, pero monstruosa (negra, estirada, ojos de más, dedos larguísimos). Mirando a la IZQUIERDA. El juego funde una en la otra.</p>
+        <a href="oscuras/madre_oscura.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_madre_oscura_frente" style="width:210px;height:240px;background-image:url('oscuras/madre_oscura_frente.png');background-size:840px 240px"></div></div>
+        <h3>madre_oscura_frente</h3>
+        <p class="archivo">oscuras/madre_oscura_frente.png</p>
+        <table>
+          <tr><td>cuadro</td><td>420 × 480 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 6 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>1680 × 480 px</td></tr>
+        </table>
+        <p class="nota">La madre monstruosa, DE FRENTE (primera persona, cuando se habla con ella sin estar tranquila).</p>
+        <a href="oscuras/madre_oscura_frente.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_abuela_oscura" style="width:210px;height:240px;background-image:url('oscuras/abuela_oscura.png');background-size:840px 240px"></div></div>
+        <h3>abuela_oscura</h3>
+        <p class="archivo">oscuras/abuela_oscura.png</p>
+        <table>
+          <tr><td>cuadro</td><td>420 × 480 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 6 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>1680 × 480 px</td></tr>
+        </table>
+        <p class="nota">La abuela hoy, vista por Josefina cuando pierde la calma: la misma pose y el mismo encuadre que abuela.png, pero monstruosa (negra, estirada, ojos de más, dedos larguísimos). Mirando a la IZQUIERDA. El juego funde una en la otra.</p>
+        <a href="oscuras/abuela_oscura.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_abuela_oscura_frente" style="width:210px;height:240px;background-image:url('oscuras/abuela_oscura_frente.png');background-size:840px 240px"></div></div>
+        <h3>abuela_oscura_frente</h3>
+        <p class="archivo">oscuras/abuela_oscura_frente.png</p>
+        <table>
+          <tr><td>cuadro</td><td>420 × 480 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 6 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>1680 × 480 px</td></tr>
+        </table>
+        <p class="nota">La abuela monstruosa, DE FRENTE (primera persona, cuando se habla con ella sin estar tranquila).</p>
+        <a href="oscuras/abuela_oscura_frente.png" download>descargar la plantilla</a>
+      </article></div></section><section><h2>Lo que la persigue</h2><p class="intro">Cuando no tararea, todo se empantana y la persiguen sus miedos. Al principio son sombras sin cara; cada recuerdo aceptado le pone la cara de quien se lo dio.</p><div class="grilla">
+      <article>
+        <div class="marco"><div class="spr a_sombra" style="width:240px;height:240px;background-image:url('miedos/sombra.png');background-size:1440px 240px"></div></div>
+        <h3>sombra</h3>
+        <p class="archivo">miedos/sombra.png</p>
+        <table>
+          <tr><td>cuadro</td><td>360 × 360 px</td></tr>
+          <tr><td>cuadros</td><td>6 · 8 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>2160 × 360 px</td></tr>
+        </table>
+        <p class="nota">Una sombra sin cara, humo negro con brazos largos. Es lo que la persigue al principio: ella cree que es suyo. Avanza hacia la IZQUIERDA (el juego la espeja cuando viene del otro lado). Loop de 6 cuadros, base en el borde de abajo, fondo transparente.</p>
+        <a href="miedos/sombra.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_miedo_mariela" style="width:240px;height:240px;background-image:url('miedos/miedo_mariela.png');background-size:1440px 240px"></div></div>
+        <h3>miedo_mariela</h3>
+        <p class="archivo">miedos/miedo_mariela.png</p>
+        <table>
+          <tr><td>cuadro</td><td>360 × 360 px</td></tr>
+          <tr><td>cuadros</td><td>6 · 8 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>2160 × 360 px</td></tr>
+        </table>
+        <p class="nota">Lo de abajo de la cama: una mano enorme que camina con los dedos. Aparece cuando se acepta el miedo de Mariela. Avanza hacia la IZQUIERDA (el juego la espeja cuando viene del otro lado). Loop de 6 cuadros, base en el borde de abajo, fondo transparente.</p>
+        <a href="miedos/miedo_mariela.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_miedo_madre" style="width:240px;height:240px;background-image:url('miedos/miedo_madre.png');background-size:1440px 240px"></div></div>
+        <h3>miedo_madre</h3>
+        <p class="archivo">miedos/miedo_madre.png</p>
+        <table>
+          <tr><td>cuadro</td><td>360 × 360 px</td></tr>
+          <tr><td>cuadros</td><td>6 · 8 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>2160 × 360 px</td></tr>
+        </table>
+        <p class="nota">Una mujer larga y empapada que chorrea agua negra, siempre a punto de caerse. El miedo de la madre. Avanza hacia la IZQUIERDA (el juego la espeja cuando viene del otro lado). Loop de 6 cuadros, base en el borde de abajo, fondo transparente.</p>
+        <a href="miedos/miedo_madre.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_miedo_abuela" style="width:240px;height:240px;background-image:url('miedos/miedo_abuela.png');background-size:1440px 240px"></div></div>
+        <h3>miedo_abuela</h3>
+        <p class="archivo">miedos/miedo_abuela.png</p>
+        <table>
+          <tr><td>cuadro</td><td>360 × 360 px</td></tr>
+          <tr><td>cuadros</td><td>6 · 8 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>2160 × 360 px</td></tr>
+        </table>
+        <p class="nota">La tormenta encorvada, con una calavera chiquita con lucecitas en el pecho. El miedo de la abuela. Avanza hacia la IZQUIERDA (el juego la espeja cuando viene del otro lado). Loop de 6 cuadros, base en el borde de abajo, fondo transparente.</p>
+        <a href="miedos/miedo_abuela.png" download>descargar la plantilla</a>
+      </article></div></section><section><h2>Sombras y objetos</h2><p class="intro">Lo que cada una le da a Josefina (un espejito, una llave, un rosario), y las sombras largas de ellas (prólogo y camino final). El juego los pinta de negro.</p><div class="grilla">
+      <article>
+        <div class="marco"><div class="spr a_objeto_espejo" style="width:200px;height:200px;background-image:url('sombras/objeto_espejo.png');background-size:200px 200px"></div></div>
+        <h3>objeto_espejo</h3>
+        <p class="archivo">sombras/objeto_espejo.png</p>
+        <table>
+          <tr><td>cuadro</td><td>200 × 200 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>200 × 200 px</td></tr>
+        </table>
+        <p class="nota">El espejito de mano de Mariela: mirarse, ser mirada, quedar linda. Es lo que le dan a Josefina: aparece colgado de su sombra (parpadeando) y en el prólogo pasa de la sombra de cada una a la de la nena. El juego lo pinta de negro: tiene que reconocerse solo por la silueta.</p>
+        <a href="sombras/objeto_espejo.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_objeto_llave" style="width:200px;height:200px;background-image:url('sombras/objeto_llave.png');background-size:200px 200px"></div></div>
+        <h3>objeto_llave</h3>
+        <p class="archivo">sombras/objeto_llave.png</p>
+        <table>
+          <tr><td>cuadro</td><td>200 × 200 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>200 × 200 px</td></tr>
+        </table>
+        <p class="nota">La llave de la casa, de la madre: cerrar todo, no salir sola. Es lo que le dan a Josefina: aparece colgado de su sombra (parpadeando) y en el prólogo pasa de la sombra de cada una a la de la nena. El juego lo pinta de negro: tiene que reconocerse solo por la silueta.</p>
+        <a href="sombras/objeto_llave.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_objeto_rosario" style="width:200px;height:200px;background-image:url('sombras/objeto_rosario.png');background-size:200px 200px"></div></div>
+        <h3>objeto_rosario</h3>
+        <p class="archivo">sombras/objeto_rosario.png</p>
+        <table>
+          <tr><td>cuadro</td><td>200 × 200 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>200 × 200 px</td></tr>
+        </table>
+        <p class="nota">El rosario de la abuela: rezar, la culpa, que si el cielo se cae es por una. Es lo que le dan a Josefina: aparece colgado de su sombra (parpadeando) y en el prólogo pasa de la sombra de cada una a la de la nena. El juego lo pinta de negro: tiene que reconocerse solo por la silueta.</p>
+        <a href="sombras/objeto_rosario.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_sombra_mariela" style="width:96px;height:240px;background-image:url('sombras/sombra_mariela.png');background-size:384px 240px"></div></div>
+        <h3>sombra_mariela</h3>
+        <p class="archivo">sombras/sombra_mariela.png</p>
+        <table>
+          <tr><td>cuadro</td><td>240 × 600 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 5 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>960 × 600 px</td></tr>
+        </table>
+        <p class="nota">Mariela, como sombra larga proyectada en una pared por una luz baja. Se usa en el prólogo (las sombras que se escurren hacia la nena dormida) y en el camino final (las sombras aceptadas caminan junto a Josefina). El juego la pinta de negro. Loop de 4 cuadros (un temblor leve).</p>
+        <a href="sombras/sombra_mariela.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_sombra_madre" style="width:96px;height:240px;background-image:url('sombras/sombra_madre.png');background-size:384px 240px"></div></div>
+        <h3>sombra_madre</h3>
+        <p class="archivo">sombras/sombra_madre.png</p>
+        <table>
+          <tr><td>cuadro</td><td>240 × 600 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 5 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>960 × 600 px</td></tr>
+        </table>
+        <p class="nota">La madre, con las manos en la boca, como sombra larga proyectada en una pared por una luz baja. Se usa en el prólogo (las sombras que se escurren hacia la nena dormida) y en el camino final (las sombras aceptadas caminan junto a Josefina). El juego la pinta de negro. Loop de 4 cuadros (un temblor leve).</p>
+        <a href="sombras/sombra_madre.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_sombra_abuela" style="width:96px;height:240px;background-image:url('sombras/sombra_abuela.png');background-size:384px 240px"></div></div>
+        <h3>sombra_abuela</h3>
+        <p class="archivo">sombras/sombra_abuela.png</p>
+        <table>
+          <tr><td>cuadro</td><td>240 × 600 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 5 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>960 × 600 px</td></tr>
+        </table>
+        <p class="nota">La abuela, rezando, como sombra larga proyectada en una pared por una luz baja. Se usa en el prólogo (las sombras que se escurren hacia la nena dormida) y en el camino final (las sombras aceptadas caminan junto a Josefina). El juego la pinta de negro. Loop de 4 cuadros (un temblor leve).</p>
+        <a href="sombras/sombra_abuela.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_sombra_senora" style="width:96px;height:240px;background-image:url('sombras/sombra_senora.png');background-size:384px 240px"></div></div>
+        <h3>sombra_senora</h3>
+        <p class="archivo">sombras/sombra_senora.png</p>
+        <table>
+          <tr><td>cuadro</td><td>240 × 600 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 5 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>960 × 600 px</td></tr>
+        </table>
+        <p class="nota">La Señora, con los brazos arriba, como sombra larga proyectada en una pared por una luz baja. Se usa en el prólogo (las sombras que se escurren hacia la nena dormida) y en el camino final (las sombras aceptadas caminan junto a Josefina). El juego la pinta de negro. Loop de 4 cuadros (un temblor leve).</p>
+        <a href="sombras/sombra_senora.png" download>descargar la plantilla</a>
+      </article></div></section><section><h2>Paredes y límites</h2><p class="intro">Las paredes son de verdad: el juego arma paredes con volumen usando estas texturas (tileables) y estas puertas. Además: la barricada de muebles, los trastos del principio, el portón del final.</p><div class="grilla">
+      <article>
+        <div class="marco"><div class="spr a_pared_presente" style="width:240px;height:240px;background-image:url('limites/pared_presente.png');background-size:240px 240px"></div></div>
+        <h3>pared_presente</h3>
+        <p class="archivo">limites/pared_presente.png</p>
+        <table>
+          <tr><td>cuadro</td><td>512 × 512 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>512 × 512 px</td></tr>
+        </table>
+        <p class="nota">El empapelado de la casa (presente). TILEABLE en las dos direcciones: se repite sobre las paredes de verdad, las que cortan el paso y tapan la vista.</p>
+        <a href="limites/pared_presente.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_pared_recuerdo" style="width:240px;height:240px;background-image:url('limites/pared_recuerdo.png');background-size:240px 240px"></div></div>
+        <h3>pared_recuerdo</h3>
+        <p class="archivo">limites/pared_recuerdo.png</p>
+        <table>
+          <tr><td>cuadro</td><td>512 × 512 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>512 × 512 px</td></tr>
+        </table>
+        <p class="nota">La pared de cal de la casa de los tíos (recuerdo). TILEABLE en las dos direcciones.</p>
+        <a href="limites/pared_recuerdo.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_puerta_presente" style="width:87px;height:240px;background-image:url('limites/puerta_presente.png');background-size:87px 240px"></div></div>
+        <h3>puerta_presente</h3>
+        <p class="archivo">limites/puerta_presente.png</p>
+        <table>
+          <tr><td>cuadro</td><td>240 × 660 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>240 × 660 px</td></tr>
+        </table>
+        <p class="nota">La hoja de una puerta de la casa, cerrada, de frente (presente). Va encastrada en la pared.</p>
+        <a href="limites/puerta_presente.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_puerta_recuerdo" style="width:87px;height:240px;background-image:url('limites/puerta_recuerdo.png');background-size:87px 240px"></div></div>
+        <h3>puerta_recuerdo</h3>
+        <p class="archivo">limites/puerta_recuerdo.png</p>
+        <table>
+          <tr><td>cuadro</td><td>240 × 660 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>240 × 660 px</td></tr>
+        </table>
+        <p class="nota">La hoja de una puerta de la casa de los tíos, con postigo, cerrada (recuerdo).</p>
+        <a href="limites/puerta_recuerdo.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_puerta_trabada" style="width:87px;height:240px;background-image:url('limites/puerta_trabada.png');background-size:175px 240px"></div></div>
+        <h3>puerta_trabada</h3>
+        <p class="archivo">limites/puerta_trabada.png</p>
+        <table>
+          <tr><td>cuadro</td><td>240 × 660 px</td></tr>
+          <tr><td>cuadros</td><td>2 · 0 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>480 × 660 px</td></tr>
+        </table>
+        <p class="nota">La puerta después del piano: trabada con una silla (cuadro 1) y suelta (cuadro 2). Cuando suena la canción, la hoja gira y se abre.</p>
+        <a href="limites/puerta_trabada.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_barricada" style="width:218px;height:240px;background-image:url('limites/barricada.png');background-size:218px 240px"></div></div>
+        <h3>barricada</h3>
+        <p class="archivo">limites/barricada.png</p>
+        <table>
+          <tr><td>cuadro</td><td>400 × 440 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>400 × 440 px</td></tr>
+        </table>
+        <p class="nota">Muebles apilados contra una puerta cerrada (colchón, sillas, cajas): se encerró ella misma. Va parado delante de la pared.</p>
+        <a href="limites/barricada.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_trastos" style="width:137px;height:240px;background-image:url('limites/trastos.png');background-size:137px 240px"></div></div>
+        <h3>trastos</h3>
+        <p class="archivo">limites/trastos.png</p>
+        <table>
+          <tr><td>cuadro</td><td>400 × 700 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>400 × 700 px</td></tr>
+        </table>
+        <p class="nota">El fondo del cuarto, al principio del presente: un ropero y cajas apiladas. No se puede ir más atrás.</p>
+        <a href="limites/trastos.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_ropero" style="width:137px;height:240px;background-image:url('limites/ropero.png');background-size:137px 240px"></div></div>
+        <h3>ropero</h3>
+        <p class="archivo">limites/ropero.png</p>
+        <table>
+          <tr><td>cuadro</td><td>400 × 700 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>400 × 700 px</td></tr>
+        </table>
+        <p class="nota">El fondo de la casa de los tíos, al principio del recuerdo: un ropero con espejo y una valija arriba.</p>
+        <a href="limites/ropero.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_porton" style="width:214px;height:240px;background-image:url('limites/porton.png');background-size:429px 240px"></div></div>
+        <h3>porton</h3>
+        <p class="archivo">limites/porton.png</p>
+        <table>
+          <tr><td>cuadro</td><td>500 × 560 px</td></tr>
+          <tr><td>cuadros</td><td>2 · 0 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>1000 × 560 px</td></tr>
+        </table>
+        <p class="nota">El portón del fondo del patio de la Señora: cerrado (cuadro 1) hasta que ella habla con la Señora; después, abierto (cuadro 2) hacia el aljibe.</p>
+        <a href="limites/porton.png" download>descargar la plantilla</a>
+      </article></div></section><section><h2>Retratos</h2><p class="intro">La caricatura que aparece en la caja de diálogo. Uno por gesto.</p><div class="grilla">
+      <article>
+        <div class="marco"><div class="spr a_retrato_mariela_calma" style="width:240px;height:240px;background-image:url('retratos/mariela_calma.png');background-size:240px 240px"></div></div>
+        <h3>retrato_mariela_calma</h3>
+        <p class="archivo">retratos/mariela_calma.png</p>
+        <table>
+          <tr><td>cuadro</td><td>368 × 368 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>368 × 368 px</td></tr>
+        </table>
+        <p class="nota">Retrato para la caja de dialogo: mariela, gesto "calma". Caricatura, ojos grandes, trazo grueso. Paleta fria (presente).</p>
+        <a href="retratos/mariela_calma.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_retrato_mariela_triste" style="width:240px;height:240px;background-image:url('retratos/mariela_triste.png');background-size:240px 240px"></div></div>
+        <h3>retrato_mariela_triste</h3>
+        <p class="archivo">retratos/mariela_triste.png</p>
+        <table>
+          <tr><td>cuadro</td><td>368 × 368 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>368 × 368 px</td></tr>
+        </table>
+        <p class="nota">Retrato para la caja de dialogo: mariela, gesto "triste". Caricatura, ojos grandes, trazo grueso. Paleta fria (presente).</p>
+        <a href="retratos/mariela_triste.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_retrato_mariela_lejos" style="width:240px;height:240px;background-image:url('retratos/mariela_lejos.png');background-size:240px 240px"></div></div>
+        <h3>retrato_mariela_lejos</h3>
+        <p class="archivo">retratos/mariela_lejos.png</p>
+        <table>
+          <tr><td>cuadro</td><td>368 × 368 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>368 × 368 px</td></tr>
+        </table>
+        <p class="nota">Retrato para la caja de dialogo: mariela, gesto "lejos". Caricatura, ojos grandes, trazo grueso. Paleta fria (presente).</p>
+        <a href="retratos/mariela_lejos.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_retrato_mariela_nina_miedo" style="width:240px;height:240px;background-image:url('retratos/mariela_nina_miedo.png');background-size:240px 240px"></div></div>
+        <h3>retrato_mariela_nina_miedo</h3>
+        <p class="archivo">retratos/mariela_nina_miedo.png</p>
+        <table>
+          <tr><td>cuadro</td><td>368 × 368 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>368 × 368 px</td></tr>
+        </table>
+        <p class="nota">Retrato para la caja de dialogo: mariela_nina, gesto "miedo". Caricatura, ojos grandes, trazo grueso. Paleta sepia (recuerdo).</p>
+        <a href="retratos/mariela_nina_miedo.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_retrato_mariela_nina_calma" style="width:240px;height:240px;background-image:url('retratos/mariela_nina_calma.png');background-size:240px 240px"></div></div>
+        <h3>retrato_mariela_nina_calma</h3>
+        <p class="archivo">retratos/mariela_nina_calma.png</p>
+        <table>
+          <tr><td>cuadro</td><td>368 × 368 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>368 × 368 px</td></tr>
+        </table>
+        <p class="nota">Retrato para la caja de dialogo: mariela_nina, gesto "calma". Caricatura, ojos grandes, trazo grueso. Paleta sepia (recuerdo).</p>
+        <a href="retratos/mariela_nina_calma.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_retrato_madre_calma" style="width:240px;height:240px;background-image:url('retratos/madre_calma.png');background-size:240px 240px"></div></div>
+        <h3>retrato_madre_calma</h3>
+        <p class="archivo">retratos/madre_calma.png</p>
+        <table>
+          <tr><td>cuadro</td><td>368 × 368 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>368 × 368 px</td></tr>
+        </table>
+        <p class="nota">Retrato para la caja de dialogo: madre, gesto "calma". Caricatura, ojos grandes, trazo grueso. Paleta fria (presente).</p>
+        <a href="retratos/madre_calma.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_retrato_madre_lejos" style="width:240px;height:240px;background-image:url('retratos/madre_lejos.png');background-size:240px 240px"></div></div>
+        <h3>retrato_madre_lejos</h3>
+        <p class="archivo">retratos/madre_lejos.png</p>
+        <table>
+          <tr><td>cuadro</td><td>368 × 368 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>368 × 368 px</td></tr>
+        </table>
+        <p class="nota">Retrato para la caja de dialogo: madre, gesto "lejos". Caricatura, ojos grandes, trazo grueso. Paleta fria (presente).</p>
+        <a href="retratos/madre_lejos.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_retrato_madre_joven_miedo" style="width:240px;height:240px;background-image:url('retratos/madre_joven_miedo.png');background-size:240px 240px"></div></div>
+        <h3>retrato_madre_joven_miedo</h3>
+        <p class="archivo">retratos/madre_joven_miedo.png</p>
+        <table>
+          <tr><td>cuadro</td><td>368 × 368 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>368 × 368 px</td></tr>
+        </table>
+        <p class="nota">Retrato para la caja de dialogo: madre_joven, gesto "miedo". Caricatura, ojos grandes, trazo grueso. Paleta sepia (recuerdo).</p>
+        <a href="retratos/madre_joven_miedo.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_retrato_madre_joven_calma" style="width:240px;height:240px;background-image:url('retratos/madre_joven_calma.png');background-size:240px 240px"></div></div>
+        <h3>retrato_madre_joven_calma</h3>
+        <p class="archivo">retratos/madre_joven_calma.png</p>
+        <table>
+          <tr><td>cuadro</td><td>368 × 368 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>368 × 368 px</td></tr>
+        </table>
+        <p class="nota">Retrato para la caja de dialogo: madre_joven, gesto "calma". Caricatura, ojos grandes, trazo grueso. Paleta sepia (recuerdo).</p>
+        <a href="retratos/madre_joven_calma.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_retrato_abuela_calma" style="width:240px;height:240px;background-image:url('retratos/abuela_calma.png');background-size:240px 240px"></div></div>
+        <h3>retrato_abuela_calma</h3>
+        <p class="archivo">retratos/abuela_calma.png</p>
+        <table>
+          <tr><td>cuadro</td><td>368 × 368 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>368 × 368 px</td></tr>
+        </table>
+        <p class="nota">Retrato para la caja de dialogo: abuela, gesto "calma". Caricatura, ojos grandes, trazo grueso. Paleta fria (presente).</p>
+        <a href="retratos/abuela_calma.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_retrato_abuela_lejos" style="width:240px;height:240px;background-image:url('retratos/abuela_lejos.png');background-size:240px 240px"></div></div>
+        <h3>retrato_abuela_lejos</h3>
+        <p class="archivo">retratos/abuela_lejos.png</p>
+        <table>
+          <tr><td>cuadro</td><td>368 × 368 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>368 × 368 px</td></tr>
+        </table>
+        <p class="nota">Retrato para la caja de dialogo: abuela, gesto "lejos". Caricatura, ojos grandes, trazo grueso. Paleta fria (presente).</p>
+        <a href="retratos/abuela_lejos.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_retrato_abuela_joven_miedo" style="width:240px;height:240px;background-image:url('retratos/abuela_joven_miedo.png');background-size:240px 240px"></div></div>
+        <h3>retrato_abuela_joven_miedo</h3>
+        <p class="archivo">retratos/abuela_joven_miedo.png</p>
+        <table>
+          <tr><td>cuadro</td><td>368 × 368 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>368 × 368 px</td></tr>
+        </table>
+        <p class="nota">Retrato para la caja de dialogo: abuela_joven, gesto "miedo". Caricatura, ojos grandes, trazo grueso. Paleta sepia (recuerdo).</p>
+        <a href="retratos/abuela_joven_miedo.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_retrato_abuela_joven_calma" style="width:240px;height:240px;background-image:url('retratos/abuela_joven_calma.png');background-size:240px 240px"></div></div>
+        <h3>retrato_abuela_joven_calma</h3>
+        <p class="archivo">retratos/abuela_joven_calma.png</p>
+        <table>
+          <tr><td>cuadro</td><td>368 × 368 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>368 × 368 px</td></tr>
+        </table>
+        <p class="nota">Retrato para la caja de dialogo: abuela_joven, gesto "calma". Caricatura, ojos grandes, trazo grueso. Paleta sepia (recuerdo).</p>
+        <a href="retratos/abuela_joven_calma.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_retrato_senora_pena" style="width:240px;height:240px;background-image:url('retratos/senora_pena.png');background-size:240px 240px"></div></div>
+        <h3>retrato_senora_pena</h3>
+        <p class="archivo">retratos/senora_pena.png</p>
+        <table>
+          <tr><td>cuadro</td><td>368 × 368 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>368 × 368 px</td></tr>
+        </table>
+        <p class="nota">Retrato para la caja de dialogo: senora, gesto "pena". Caricatura, ojos grandes, trazo grueso. Paleta fria (presente).</p>
+        <a href="retratos/senora_pena.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_retrato_senora_lejos" style="width:240px;height:240px;background-image:url('retratos/senora_lejos.png');background-size:240px 240px"></div></div>
+        <h3>retrato_senora_lejos</h3>
+        <p class="archivo">retratos/senora_lejos.png</p>
+        <table>
+          <tr><td>cuadro</td><td>368 × 368 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>368 × 368 px</td></tr>
+        </table>
+        <p class="nota">Retrato para la caja de dialogo: senora, gesto "lejos". Caricatura, ojos grandes, trazo grueso. Paleta fria (presente).</p>
+        <a href="retratos/senora_lejos.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_retrato_aljibe_lejos" style="width:240px;height:240px;background-image:url('retratos/aljibe_lejos.png');background-size:240px 240px"></div></div>
+        <h3>retrato_aljibe_lejos</h3>
+        <p class="archivo">retratos/aljibe_lejos.png</p>
+        <table>
+          <tr><td>cuadro</td><td>368 × 368 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>368 × 368 px</td></tr>
+        </table>
+        <p class="nota">Retrato para la caja de dialogo: aljibe, gesto "lejos". Caricatura, ojos grandes, trazo grueso. Paleta fria (presente).</p>
+        <a href="retratos/aljibe_lejos.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_retrato_reflejo_calma" style="width:240px;height:240px;background-image:url('retratos/reflejo_calma.png');background-size:240px 240px"></div></div>
+        <h3>retrato_reflejo_calma</h3>
+        <p class="archivo">retratos/reflejo_calma.png</p>
+        <table>
+          <tr><td>cuadro</td><td>368 × 368 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>368 × 368 px</td></tr>
+        </table>
+        <p class="nota">Retrato para la caja de dialogo: reflejo, gesto "calma". Caricatura, ojos grandes, trazo grueso. Paleta sepia (recuerdo).</p>
+        <a href="retratos/reflejo_calma.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_retrato_nina_calma" style="width:240px;height:240px;background-image:url('retratos/nina_calma.png');background-size:240px 240px"></div></div>
+        <h3>retrato_nina_calma</h3>
+        <p class="archivo">retratos/nina_calma.png</p>
+        <table>
+          <tr><td>cuadro</td><td>368 × 368 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>368 × 368 px</td></tr>
+        </table>
+        <p class="nota">Retrato para la caja de dialogo: nina, gesto "calma". Caricatura, ojos grandes, trazo grueso. Paleta sepia (recuerdo).</p>
+        <a href="retratos/nina_calma.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_retrato_nina_lejos" style="width:240px;height:240px;background-image:url('retratos/nina_lejos.png');background-size:240px 240px"></div></div>
+        <h3>retrato_nina_lejos</h3>
+        <p class="archivo">retratos/nina_lejos.png</p>
+        <table>
+          <tr><td>cuadro</td><td>368 × 368 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>368 × 368 px</td></tr>
+        </table>
+        <p class="nota">Retrato para la caja de dialogo: nina, gesto "lejos". Caricatura, ojos grandes, trazo grueso. Paleta sepia (recuerdo).</p>
+        <a href="retratos/nina_lejos.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_retrato_josefina_calma" style="width:240px;height:240px;background-image:url('retratos/josefina_calma.png');background-size:240px 240px"></div></div>
+        <h3>retrato_josefina_calma</h3>
+        <p class="archivo">retratos/josefina_calma.png</p>
+        <table>
+          <tr><td>cuadro</td><td>368 × 368 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>368 × 368 px</td></tr>
+        </table>
+        <p class="nota">Retrato para la caja de dialogo: josefina, gesto "calma". Caricatura, ojos grandes, trazo grueso. Paleta fria (presente).</p>
+        <a href="retratos/josefina_calma.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_retrato_josefina_lejos" style="width:240px;height:240px;background-image:url('retratos/josefina_lejos.png');background-size:240px 240px"></div></div>
+        <h3>retrato_josefina_lejos</h3>
+        <p class="archivo">retratos/josefina_lejos.png</p>
+        <table>
+          <tr><td>cuadro</td><td>368 × 368 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>368 × 368 px</td></tr>
+        </table>
+        <p class="nota">Retrato para la caja de dialogo: josefina, gesto "lejos". Caricatura, ojos grandes, trazo grueso. Paleta fria (presente).</p>
+        <a href="retratos/josefina_lejos.png" download>descargar la plantilla</a>
+      </article></div></section><section><h2>Telones</h2><p class="intro">Los dos fondos del teatro. El del recuerdo se ve desde atrás del escenario, por eso está espejado.</p><div class="grilla">
+      <article>
+        <div class="marco"><div class="spr a_telon_presente" style="width:240px;height:68px;background-image:url('telones/presente.png');background-size:240px 68px"></div></div>
+        <h3>telon_presente</h3>
+        <p class="archivo">telones/presente.png</p>
+        <table>
+          <tr><td>cuadro</td><td>3800 × 1080 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>3800 × 1080 px</td></tr>
+        </table>
+        <p class="nota">Telon del PRESENTE, el que se ve de frente. La casa de noche y, a la derecha (desde x=5300 del mundo), el patio de la Senora hoy, descuidado. Cada px equivale a 2.5 unidades del mundo; el piso del escenario queda a 1/3 desde abajo.</p>
+        <a href="telones/presente.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_telon_recuerdo" style="width:240px;height:68px;background-image:url('telones/recuerdo.png');background-size:240px 68px"></div></div>
+        <h3>telon_recuerdo</h3>
+        <p class="archivo">telones/recuerdo.png</p>
+        <table>
+          <tr><td>cuadro</td><td>3800 × 1080 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>3800 × 1080 px</td></tr>
+        </table>
+        <p class="nota">Telon del RECUERDO, el que se ve desde atras del escenario (por eso el mundo esta espejado: el comienzo del juego queda a la DERECHA de la imagen). Una siesta en Corrientes, como foto vieja pasada de luz.</p>
+        <a href="telones/recuerdo.png" download>descargar la plantilla</a>
+      </article></div></section><section><h2>Objetos</h2><p class="intro">Muebles y cosas que se paran sobre el escenario. Base apoyada en el borde de abajo.</p><div class="grilla">
+      <article>
+        <div class="marco"><div class="spr a_cama" style="width:240px;height:133px;background-image:url('objetos/cama.png');background-size:240px 133px"></div></div>
+        <h3>cama</h3>
+        <p class="archivo">objetos/cama.png</p>
+        <table>
+          <tr><td>cuadro</td><td>360 × 200 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>360 × 200 px</td></tr>
+        </table>
+        <p class="nota">La cama de Josefina (presente).</p>
+        <a href="objetos/cama.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_velador" style="width:88px;height:220px;background-image:url('objetos/velador.png');background-size:176px 220px"></div></div>
+        <h3>velador</h3>
+        <p class="archivo">objetos/velador.png</p>
+        <table>
+          <tr><td>cuadro</td><td>88 × 220 px</td></tr>
+          <tr><td>cuadros</td><td>2 · 4 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>176 × 220 px</td></tr>
+        </table>
+        <p class="nota">El velador encendido (presente). 2 cuadros de titileo.</p>
+        <a href="objetos/velador.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_tele" style="width:240px;height:224px;background-image:url('objetos/tele.png');background-size:480px 224px"></div></div>
+        <h3>tele</h3>
+        <p class="archivo">objetos/tele.png</p>
+        <table>
+          <tr><td>cuadro</td><td>300 × 280 px</td></tr>
+          <tr><td>cuadros</td><td>2 · 12 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>600 × 280 px</td></tr>
+        </table>
+        <p class="nota">El televisor prendido con estatica (presente).</p>
+        <a href="objetos/tele.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_piano" style="width:240px;height:203px;background-image:url('objetos/piano.png');background-size:240px 203px"></div></div>
+        <h3>piano</h3>
+        <p class="archivo">objetos/piano.png</p>
+        <table>
+          <tr><td>cuadro</td><td>520 × 440 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>520 × 440 px</td></tr>
+        </table>
+        <p class="nota">El piano de la madre, que de noche toca el diablo (presente).</p>
+        <a href="objetos/piano.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_aljibe_presente" style="width:195px;height:240px;background-image:url('objetos/aljibe_presente.png');background-size:195px 240px"></div></div>
+        <h3>aljibe_presente</h3>
+        <p class="archivo">objetos/aljibe_presente.png</p>
+        <table>
+          <tr><td>cuadro</td><td>520 × 640 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>520 × 640 px</td></tr>
+        </table>
+        <p class="nota">El aljibe hoy: la cal descascarada, el ladrillo rojo a la vista, casi oculto entre pastos.</p>
+        <a href="objetos/aljibe_presente.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_aljibe_recuerdo" style="width:195px;height:240px;background-image:url('objetos/aljibe_recuerdo.png');background-size:195px 240px"></div></div>
+        <h3>aljibe_recuerdo</h3>
+        <p class="archivo">objetos/aljibe_recuerdo.png</p>
+        <table>
+          <tr><td>cuadro</td><td>520 × 640 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>520 × 640 px</td></tr>
+        </table>
+        <p class="nota">El aljibe en el recuerdo: pintado de blanco.</p>
+        <a href="objetos/aljibe_recuerdo.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_altar_presente" style="width:144px;height:240px;background-image:url('objetos/altar_presente.png');background-size:288px 240px"></div></div>
+        <h3>altar_presente</h3>
+        <p class="archivo">objetos/altar_presente.png</p>
+        <table>
+          <tr><td>cuadro</td><td>480 × 800 px</td></tr>
+          <tr><td>cuadros</td><td>2 · 2 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>960 × 800 px</td></tr>
+        </table>
+        <p class="nota">El altar hoy: un San La Muerte enorme, del tamano de un crucifijo de iglesia, con lucecitas de guirnalda navidena en las cuencas (2 cuadros: prendidas/apagadas).</p>
+        <a href="objetos/altar_presente.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_altar_recuerdo" style="width:144px;height:240px;background-image:url('objetos/altar_recuerdo.png');background-size:288px 240px"></div></div>
+        <h3>altar_recuerdo</h3>
+        <p class="archivo">objetos/altar_recuerdo.png</p>
+        <table>
+          <tr><td>cuadro</td><td>480 × 800 px</td></tr>
+          <tr><td>cuadros</td><td>2 · 2 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>960 × 800 px</td></tr>
+        </table>
+        <p class="nota">El altar en el recuerdo: ofrendas, escarpines, estampitas, rosarios, un San La Muerte chico.</p>
+        <a href="objetos/altar_recuerdo.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_planta_presente" style="width:180px;height:240px;background-image:url('objetos/planta_presente.png');background-size:180px 240px"></div></div>
+        <h3>planta_presente</h3>
+        <p class="archivo">objetos/planta_presente.png</p>
+        <table>
+          <tr><td>cuadro</td><td>360 × 480 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>360 × 480 px</td></tr>
+        </table>
+        <p class="nota">Ruda crecida hasta alturas insolitas y rosas muertas (presente).</p>
+        <a href="objetos/planta_presente.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_planta_recuerdo" style="width:180px;height:240px;background-image:url('objetos/planta_recuerdo.png');background-size:180px 240px"></div></div>
+        <h3>planta_recuerdo</h3>
+        <p class="archivo">objetos/planta_recuerdo.png</p>
+        <table>
+          <tr><td>cuadro</td><td>360 × 480 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>360 × 480 px</td></tr>
+        </table>
+        <p class="nota">Plantas del patio, azucenas, ruda (recuerdo).</p>
+        <a href="objetos/planta_recuerdo.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_ventilador" style="width:86px;height:240px;background-image:url('objetos/ventilador.png');background-size:259px 240px"></div></div>
+        <h3>ventilador</h3>
+        <p class="archivo">objetos/ventilador.png</p>
+        <table>
+          <tr><td>cuadro</td><td>180 × 500 px</td></tr>
+          <tr><td>cuadros</td><td>3 · 10 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>540 × 500 px</td></tr>
+        </table>
+        <p class="nota">Ventilador de pie en la casa de los tios (recuerdo). 3 cuadros girando.</p>
+        <a href="objetos/ventilador.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_mesa_mandarinas" style="width:240px;height:147px;background-image:url('objetos/mesa_mandarinas.png');background-size:240px 147px"></div></div>
+        <h3>mesa_mandarinas</h3>
+        <p class="archivo">objetos/mesa_mandarinas.png</p>
+        <table>
+          <tr><td>cuadro</td><td>360 × 220 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>360 × 220 px</td></tr>
+        </table>
+        <p class="nota">Mesa con mandarinas y cascaras (recuerdo).</p>
+        <a href="objetos/mesa_mandarinas.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_banqueta" style="width:140px;height:120px;background-image:url('objetos/banqueta.png');background-size:140px 120px"></div></div>
+        <h3>banqueta</h3>
+        <p class="archivo">objetos/banqueta.png</p>
+        <table>
+          <tr><td>cuadro</td><td>140 × 120 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>140 × 120 px</td></tr>
+        </table>
+        <p class="nota">Banqueta (recuerdo).</p>
+        <a href="objetos/banqueta.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_sillon" style="width:240px;height:168px;background-image:url('objetos/sillon.png');background-size:240px 168px"></div></div>
+        <h3>sillon</h3>
+        <p class="archivo">objetos/sillon.png</p>
+        <table>
+          <tr><td>cuadro</td><td>400 × 280 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>400 × 280 px</td></tr>
+        </table>
+        <p class="nota">El sillon de la Senora, donde la nina se durmio (recuerdo).</p>
+        <a href="objetos/sillon.png" download>descargar la plantilla</a>
+      </article></div></section><section><h2>Efectos</h2><p class="intro">Cosas animadas: la tinta del miedo, los huecos del recuerdo, los biombos con sombras.</p><div class="grilla">
+      <article>
+        <div class="marco"><div class="spr a_biombo" style="width:223px;height:240px;background-image:url('efectos/biombo.png');background-size:891px 240px"></div></div>
+        <h3>biombo</h3>
+        <p class="archivo">efectos/biombo.png</p>
+        <table>
+          <tr><td>cuadro</td><td>520 × 560 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 6 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>2080 × 560 px</td></tr>
+        </table>
+        <p class="nota">Biombo de papel con la sombra enorme de quien tiene miedo, proyectada por la luz de la siesta (recuerdo). Loop de 4 cuadros.</p>
+        <a href="efectos/biombo.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_biombo_vacio" style="width:223px;height:240px;background-image:url('efectos/biombo_vacio.png');background-size:223px 240px"></div></div>
+        <h3>biombo_vacio</h3>
+        <p class="archivo">efectos/biombo_vacio.png</p>
+        <table>
+          <tr><td>cuadro</td><td>520 × 560 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>520 × 560 px</td></tr>
+        </table>
+        <p class="nota">El mismo biombo, sin sombra: despues de que la nina se llevo el miedo.</p>
+        <a href="efectos/biombo_vacio.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_pantano" style="width:240px;height:94px;background-image:url('efectos/pantano.png');background-size:960px 94px"></div></div>
+        <h3>pantano</h3>
+        <p class="archivo">efectos/pantano.png</p>
+        <table>
+          <tr><td>cuadro</td><td>512 × 200 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 6 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>2048 × 200 px</td></tr>
+        </table>
+        <p class="nota">El pantano: barro negro que sube desde el piso cuando Josefina no tararea. TILEABLE en horizontal. Loop de 4 cuadros.</p>
+        <a href="efectos/pantano.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_vela" style="width:48px;height:100px;background-image:url('efectos/vela.png');background-size:96px 100px"></div></div>
+        <h3>vela</h3>
+        <p class="archivo">efectos/vela.png</p>
+        <table>
+          <tr><td>cuadro</td><td>48 × 100 px</td></tr>
+          <tr><td>cuadros</td><td>2 · 8 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>96 × 100 px</td></tr>
+        </table>
+        <p class="nota">Vela encendida, 2 cuadros.</p>
+        <a href="efectos/vela.png" download>descargar la plantilla</a>
+      </article></div></section><section><h2>Prólogo</h2><p class="intro">La animación del principio: el viaje a Corrientes, el patio, el aljibe, el cuarto del altar.</p><div class="grilla">
+      <article>
+        <div class="marco"><div class="spr a_pro_ruta" style="width:240px;height:68px;background-image:url('prologo/ruta.png');background-size:240px 68px"></div></div>
+        <h3>pro_ruta</h3>
+        <p class="archivo">prologo/ruta.png</p>
+        <table>
+          <tr><td>cuadro</td><td>1920 × 540 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>1920 × 540 px</td></tr>
+        </table>
+        <p class="nota">La ruta de noche, viajando a Corrientes. TILEABLE en horizontal (el borde derecho continua en el izquierdo).</p>
+        <a href="prologo/ruta.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_pro_renault" style="width:240px;height:104px;background-image:url('prologo/renault12.png');background-size:480px 104px"></div></div>
+        <h3>pro_renault</h3>
+        <p class="archivo">prologo/renault12.png</p>
+        <table>
+          <tr><td>cuadro</td><td>600 × 260 px</td></tr>
+          <tr><td>cuadros</td><td>2 · 8 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>1200 × 260 px</td></tr>
+        </table>
+        <p class="nota">El Renault 12 con la familia: el padre maneja, la madre adelante, atras la abuela, la nena apretada en el medio y la hermana. Mirando a la DERECHA. 2 cuadros de traqueteo.</p>
+        <a href="prologo/renault12.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_pro_patio" style="width:240px;height:135px;background-image:url('prologo/patio_siesta.png');background-size:240px 135px"></div></div>
+        <h3>pro_patio</h3>
+        <p class="archivo">prologo/patio_siesta.png</p>
+        <table>
+          <tr><td>cuadro</td><td>1920 × 1080 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>1920 × 1080 px</td></tr>
+        </table>
+        <p class="nota">El patio de la Senora a la hora de la siesta, visto de frente.</p>
+        <a href="prologo/patio_siesta.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_pro_reflejo" style="width:240px;height:240px;background-image:url('prologo/reflejo.png');background-size:960px 240px"></div></div>
+        <h3>pro_reflejo</h3>
+        <p class="archivo">prologo/reflejo.png</p>
+        <table>
+          <tr><td>cuadro</td><td>720 × 720 px</td></tr>
+          <tr><td>cuadros</td><td>4 · 4 por segundo</td></tr>
+          <tr><td>PNG entero</td><td>2880 × 720 px</td></tr>
+        </table>
+        <p class="nota">Visto desde arriba, adentro del aljibe: su cara en el agua negra, como una luna con el pelo rubio. SOLO el círculo del agua: afuera del círculo, transparente (el borde del aljibe lo dibuja el juego). 4 cuadros de ondas.</p>
+        <a href="prologo/reflejo.png" download>descargar la plantilla</a>
+      </article>
+      <article>
+        <div class="marco"><div class="spr a_pro_cuarto" style="width:240px;height:135px;background-image:url('prologo/cuarto_altar.png');background-size:240px 135px"></div></div>
+        <h3>pro_cuarto</h3>
+        <p class="archivo">prologo/cuarto_altar.png</p>
+        <table>
+          <tr><td>cuadro</td><td>1920 × 1080 px</td></tr>
+          <tr><td>cuadros</td><td>1</td></tr>
+          <tr><td>PNG entero</td><td>1920 × 1080 px</td></tr>
+        </table>
+        <p class="nota">El cuarto del altar, en penumbra de siesta.</p>
+        <a href="prologo/cuarto_altar.png" download>descargar la plantilla</a>
+      </article></div></section>
+<section><h2>Sonidos</h2>
+<p class="intro">Igual que las imágenes: si existe <code>assets/sonidos/&lt;nombre&gt;.mp3</code> (o <code>.wav</code> / <code>.ogg</code>), el juego lo usa; si no, suena el sintetizado. En <code>sonidos/_plantillas/</code> están los sintetizados exportados como WAV para editarlos: se editan y se guardan en <code>sonidos/</code> (sin <code>_plantillas</code>) con el mismo nombre. Los que dicen <i>en bucle</i> tienen que empalmar el final con el principio.</p>
+<table class="tabla"><tr><th>archivo</th><th></th><th>qué es</th><th>plantilla</th></tr><tr><td><code>sonidos/amb_ahora.mp3</code></td><td>en bucle</td><td>El aire del presente: la casa de noche. Grave, frío, casi inaudible. En bucle.</td><td><audio controls preload="none" src="sonidos/_plantillas/amb_ahora.wav"></audio></td></tr><tr><td><code>sonidos/amb_antes.mp3</code></td><td>en bucle</td><td>La siesta del recuerdo: chicharras, calor, un ventilador lejos. En bucle.</td><td><audio controls preload="none" src="sonidos/_plantillas/amb_antes.wav"></audio></td></tr><tr><td><code>sonidos/amb_ruta.mp3</code></td><td>en bucle</td><td>Prólogo: la ruta de noche dentro del auto. Motor, viento. En bucle.</td><td><audio controls preload="none" src="sonidos/_plantillas/amb_ruta.wav"></audio></td></tr><tr><td><code>sonidos/amb_cuarto.mp3</code></td><td>en bucle</td><td>Prólogo: el cuarto del altar en penumbra de siesta. En bucle.</td><td><audio controls preload="none" src="sonidos/_plantillas/amb_cuarto.wav"></audio></td></tr><tr><td><code>sonidos/amb_patio.mp3</code></td><td>en bucle</td><td>El final: el patio de noche, pastos, algo de viento. En bucle.</td><td><audio controls preload="none" src="sonidos/_plantillas/amb_patio.wav"></audio></td></tr><tr><td><code>sonidos/tormenta.mp3</code></td><td>en bucle</td><td>Lluvia pesada con truenos lejanos (el living de la abuela). En bucle.</td><td><audio controls preload="none" src="sonidos/_plantillas/tormenta.wav"></audio></td></tr><tr><td><code>sonidos/pantano.mp3</code></td><td>en bucle</td><td>El pantano: burbujeo espeso, barro. Sube cuando no tarareás. En bucle.</td><td><audio controls preload="none" src="sonidos/_plantillas/pantano.wav"></audio></td></tr><tr><td><code>sonidos/perseguidor.mp3</code></td><td>en bucle</td><td>Lo que la persigue: arrastre, algo que respira. Sube con la cercanía. En bucle.</td><td><audio controls preload="none" src="sonidos/_plantillas/perseguidor.wav"></audio></td></tr><tr><td><code>sonidos/halo.mp3</code></td><td>en bucle</td><td>Mientras tarareás, el aire se calienta: un acorde tenue. En bucle, sin la voz (la voz es la del jugador).</td><td><audio controls preload="none" src="sonidos/_plantillas/halo.wav"></audio></td></tr><tr><td><code>sonidos/cancion.mp3</code></td><td>una vez</td><td>La canción de cuna de la familia, tarareada, sin letra. Sus notas son las de ellas tres: la de Mariela, la de la madre, la de la abuela.</td><td><audio controls preload="none" src="sonidos/_plantillas/cancion.wav"></audio></td></tr><tr><td><code>sonidos/piano.mp3</code></td><td>una vez</td><td>Una nota de piano viejo, Do central (261 Hz). El juego la afina para cada tecla.</td><td><audio controls preload="none" src="sonidos/_plantillas/piano.wav"></audio></td></tr><tr><td><code>sonidos/latido.mp3</code></td><td>una vez</td><td>Un latido (lub-dub).</td><td><audio controls preload="none" src="sonidos/_plantillas/latido.wav"></audio></td></tr><tr><td><code>sonidos/paso_ahora.mp3</code></td><td>una vez</td><td>Un paso en el piso de madera de noche.</td><td><audio controls preload="none" src="sonidos/_plantillas/paso_ahora.wav"></audio></td></tr><tr><td><code>sonidos/paso_antes.mp3</code></td><td>una vez</td><td>Un paso descalzo en baldosa caliente.</td><td><audio controls preload="none" src="sonidos/_plantillas/paso_antes.wav"></audio></td></tr><tr><td><code>sonidos/trueno.mp3</code></td><td>una vez</td><td>Un trueno.</td><td><audio controls preload="none" src="sonidos/_plantillas/trueno.wav"></audio></td></tr><tr><td><code>sonidos/gota.mp3</code></td><td>una vez</td><td>Una gota que cae en el agua del aljibe.</td><td><audio controls preload="none" src="sonidos/_plantillas/gota.wav"></audio></td></tr><tr><td><code>sonidos/tinta.mp3</code></td><td>una vez</td><td>La sombra de una de ellas que se escurre hasta la nena: un gorgoteo que baja.</td><td><audio controls preload="none" src="sonidos/_plantillas/tinta.wav"></audio></td></tr><tr><td><code>sonidos/campana.mp3</code></td><td>una vez</td><td>Una nota igualada: algo se calma.</td><td><audio controls preload="none" src="sonidos/_plantillas/campana.wav"></audio></td></tr><tr><td><code>sonidos/ahogo.mp3</code></td><td>una vez</td><td>Cuando la alcanzan: hundirse en el barro, todo se apaga.</td><td><audio controls preload="none" src="sonidos/_plantillas/ahogo.wav"></audio></td></tr><tr><td><code>sonidos/rebobinar.mp3</code></td><td>una vez</td><td>Cuando la alcanzan, todo se rebobina hasta la última luz: una cinta que corre hacia atrás. El juego la acelera o la frena según la distancia.</td><td><audio controls preload="none" src="sonidos/_plantillas/rebobinar.wav"></audio></td></tr><tr><td><code>sonidos/estallido.mp3</code></td><td>una vez</td><td>El grito final: todo se chupa hacia adentro y estalla.</td><td><audio controls preload="none" src="sonidos/_plantillas/estallido.wav"></audio></td></tr><tr><td><code>sonidos/desgarro.mp3</code></td><td>una vez</td><td>Papel que se rasga de arriba abajo.</td><td><audio controls preload="none" src="sonidos/_plantillas/desgarro.wav"></audio></td></tr></table>
+<h2>Voces</h2>
+<p class="intro">Un archivo por párrafo. Solo hablan ellas: la protagonista no tiene voz. El subtítulo se escribe al ritmo de la grabación (avanza cuando suena la voz y se detiene en los silencios), así que conviene dejar las pausas naturales. Si una voz no está, suena un murmullo en la altura de cada personaje.</p>
+<table class="tabla"><tr><th>quién</th><th>archivo</th><th>texto</th></tr><tr><td>Mariela</td><td><code>sonidos/voces/mariela_ahora_m1.mp3</code></td><td>¿Todavía tenés mi espejito? Nunca me lo devolviste.</td></tr><tr><td>Mariela</td><td><code>sonidos/voces/mariela_ahora_m2.mp3</code></td><td>El de aquella siesta. Yo no me podía mirar sin que algo me mirara desde atrás. Vos te lo quedaste.</td></tr><tr><td>Mariela</td><td><code>sonidos/voces/mariela_ahora_m3.mp3</code></td><td>Mejor. Igual a vos te queda lindo.</td></tr><tr><td>Mariela</td><td><code>sonidos/voces/mariela_antes_n1.mp3</code></td><td>No te mires en el espejo de noche. Hay alguien atrás que se peina con tu pelo.</td></tr><tr><td>Mariela</td><td><code>sonidos/voces/mariela_antes_n2.mp3</code></td><td>Cantame lo de la abuela y te lo presto.</td></tr><tr><td>Mariela</td><td><code>sonidos/voces/mariela_antes_n3.mp3</code></td><td>Tomá, quedátelo. Que te mire a vos.</td></tr><tr><td>Mamá</td><td><code>sonidos/voces/madre_ahora_p1.mp3</code></td><td>¿Cerraste con llave? Vos siempre cerrás con llave, Jose. Dos vueltas.</td></tr><tr><td>Mamá</td><td><code>sonidos/voces/madre_ahora_p2.mp3</code></td><td>Yo no te di nada. Nadie te puso nada. Sos así.</td></tr><tr><td>Mamá</td><td><code>sonidos/voces/madre_antes_j1.mp3</code></td><td>No salgas. Una mujer sola afuera no sabe lo que le puede pasar. Hay que cerrar todo.</td></tr><tr><td>Mamá</td><td><code>sonidos/voces/madre_antes_j2.mp3</code></td><td>Por eso. Alguien tiene que tener la llave. Cantame, así me duermo.</td></tr><tr><td>Mamá</td><td><code>sonidos/voces/madre_antes_j3.mp3</code></td><td>Tomá la llave. Nunca salgas sin cerrar. Nunca.</td></tr><tr><td>La abuela</td><td><code>sonidos/voces/abuela_ahora_q1.mp3</code></td><td>Ya no rezo, nena. Perdí el rosario hace años. Duermo como una piedra.</td></tr><tr><td>La abuela</td><td><code>sonidos/voces/abuela_ahora_q2.mp3</code></td><td>No lo perdí. Se lo di a alguien. No me acuerdo a quién.</td></tr><tr><td>La abuela</td><td><code>sonidos/voces/abuela_antes_r1.mp3</code></td><td>Rezá conmigo. Si no rezamos se cae el cielo, y si se cae es culpa de una.</td></tr><tr><td>La abuela</td><td><code>sonidos/voces/abuela_antes_r2.mp3</code></td><td>De la que no rezó. Cantalo conmigo.</td></tr><tr><td>La abuela</td><td><code>sonidos/voces/abuela_antes_r3.mp3</code></td><td>Tomá, rezalo vos por todas. Cuenta por cuenta.</td></tr><tr><td>La Señora</td><td><code>sonidos/voces/senora_s0.mp3</code></td><td>Venís con las manos vacías. Pero cargás algo.</td></tr><tr><td>La Señora</td><td><code>sonidos/voces/senora_s0b.mp3</code></td><td>Eso te dijeron. Andá al fondo.</td></tr><tr><td>La Señora</td><td><code>sonidos/voces/senora_s1.mp3</code></td><td>Yo no curaba. Pasaba las cosas de mano.</td></tr><tr><td>La Señora</td><td><code>sonidos/voces/senora_s2.mp3</code></td><td>Vos dormías. Tenías las manos vacías.</td></tr><tr><td>Ella misma, nena</td><td><code>sonidos/voces/misma_nina_f1_0.mp3</code></td><td>Tenés las manos llenas y no sabés de quién es nada.</td></tr><tr><td>Ella misma, nena</td><td><code>sonidos/voces/misma_nina_f2.mp3</code></td><td>Si cantás conmigo, te quedás acá. Si te callás, se lo llevan.</td></tr><tr><td>Ella misma, nena</td><td><code>sonidos/voces/misma_nina_f1_1.mp3</code></td><td>Algo de lo que cargás ya sabés de quién es.</td></tr><tr><td>Ella misma, nena</td><td><code>sonidos/voces/misma_nina_f1_2.mp3</code></td><td>Ya sabés de quién es cada cosa.</td></tr><tr><td>Ella misma, grande</td><td><code>sonidos/voces/misma_adulta_f1_0.mp3</code></td><td>Mirá todo lo que vas a cargar.</td></tr><tr><td>Ella misma, grande</td><td><code>sonidos/voces/misma_adulta_f2.mp3</code></td><td>Si cantás conmigo, te quedás acá. Si te callás, se lo llevan.</td></tr><tr><td>Ella misma, grande</td><td><code>sonidos/voces/misma_adulta_f1_1.mp3</code></td><td>Algo de esto no va a ser tuyo.</td></tr><tr><td>Ella misma, grande</td><td><code>sonidos/voces/misma_adulta_f1_2.mp3</code></td><td>Nada de esto va a ser tuyo.</td></tr></table></section>
+<footer>Generado por <code>exportar.html</code>. 97 imágenes. Grupo 11 · TDMM4.</footer>
+</body></html>
